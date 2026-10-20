@@ -162,3 +162,28 @@ def plot_grouped_bars(ax, table, ylabel, ylim=None):
     ax.legend(fontsize=12, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=n_cols)
     _finish(ax)
     ax.grid(False, axis="x")
+
+
+def plot_rates_with_ci(ax, labels, rates, cis, colors, groups=None):
+    """Bars of rates (in %) with confidence intervals; `groups` is a list of (title, n_bars) used to
+    separate consecutive bars into labelled groups."""
+    gap, x, pos = 0.8, 0.0, []
+    for title, n in groups or [(None, len(labels))]:
+        start = x
+        for _ in range(n):
+            pos.append(x)
+            x += 1
+        if title:
+            ax.text((start + x - 1) / 2, 1.02, bold(title), transform=ax.get_xaxis_transform(),
+                    ha="center", va="bottom", fontsize=14)
+        x += gap
+    rates, cis = np.asarray(rates), np.asarray(cis)
+    ax.bar(pos, rates, width=0.75, color=colors, alpha=0.8, edgecolor="black", linewidth=1.2)
+    ax.errorbar(pos, rates, yerr=[rates - cis[:, 0], cis[:, 1] - rates], fmt="none", ecolor="black",
+                elinewidth=1.4, capsize=4)
+    ax.set_xticks(pos)
+    ax.set_xticklabels(labels, fontsize=12)
+    ax.set_ylabel(bold("Urgent-care rate (%)"), fontsize=16)
+    ax.set_ylim(0, max(cis[:, 1]) * 1.1)
+    _finish(ax)
+    ax.grid(False, axis="x")

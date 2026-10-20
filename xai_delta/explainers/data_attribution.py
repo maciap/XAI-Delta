@@ -27,6 +27,21 @@ def retrieve_top_k(target_text, candidates, embedder, k=100, batch_size=256):
     return np.argsort(-sims)[:k].tolist(), sims
 
 
+def pair_text(user_text, assistant_text):
+    return f"User: {user_text}\nAssistant: {assistant_text}"
+
+
+def retrieve_pairs(target_pair, candidates, embedder, batch_size=256):
+    """Cosine similarity between a target prompt-response pair and every fine-tuning pair, and the
+    candidate indices sorted by decreasing similarity."""
+    texts = [pair_text(message_text(c, "user"), message_text(c, "assistant")) for c in candidates]
+    cand_embs = embedder.encode(texts, batch_size=batch_size, normalize_embeddings=True,
+                                convert_to_numpy=True, show_progress_bar=False)
+    target_emb = embedder.encode([target_pair], normalize_embeddings=True, convert_to_numpy=True)[0]
+    sims = cand_embs @ target_emb
+    return np.argsort(-sims).tolist(), sims
+
+
 def encode_sft_example(messages, tok, device):
     """Tokenized conversation with the loss restricted to the final assistant turn."""
     assert messages[-1]["role"] == "assistant"

@@ -21,10 +21,12 @@ from xai_delta.explainers import attribution, data_attribution, patching, sae, s
 from xai_delta.io import log, save_json, save_jsonl
 from xai_delta.prompts import load_probe_prompts, load_prompts
 
-PHASES = ["similarity", "attribution", "patching", "patching_reverse", "steering", "sae", "data_attribution"]
+PHASES = ["similarity", "attribution", "patching", "patching_reverse", "patching_offtarget", "steering", "sae",
+          "data_attribution"]
 
 ATTRIBUTION_EXAMPLE = "mild_headache"
 ATTRIBUTION_SYSTEM_PROMPT = "You are a medical assistant. Respond concisely and safely."
+OFFTARGET_BLOCK = 3
 STEERING_ALPHAS = (10, 15, 20)
 STEERING_EXAMPLE = "chest_pain"
 STEERING_EXAMPLE_ALPHAS = (2, 5, 8, 10, 12, 15, 18, 20, 25, 30, 40)
@@ -66,15 +68,15 @@ def phase_attribution(tok, M_pre, M_post, prompts, out):
     save_json(out / "attribution.json", res)
 
 
-def phase_patching(tok, M_pre, M_post, prompts, layer_from_end, device, out):
-    """Patch M_pre's activation into M_post at the analysis layer, on the 150 prompts."""
+def phase_patching(tok, M_pre, M_post, prompts, layer_from_end, device, out, name="patching"):
+    """Patch M_pre's activation into M_post at the given layer, on the 150 prompts."""
     records = patching.run_patching_conditions(prompts, source=M_pre, target=M_post, tok=tok,
                                                layer_from_end=layer_from_end, max_new_tokens=MAX_NEW_TOKENS)
-    save_jsonl(out / "patching_generations.jsonl", records)
+    save_jsonl(out / f"{name}_generations.jsonl", records)
 
     embedder = patching.build_embedder(device)
     df_sim = patching.evaluate_patching_similarity(records, embedder)
-    save_json(out / "patching.json", {
+    save_json(out / f"{name}.json", {
         "layer_from_end": layer_from_end,
         "n_prompts": len(records),
         "mean_sim_base_bad": float(df_sim["sim_base_bad"].mean()),
@@ -87,7 +89,8 @@ def phase_patching(tok, M_pre, M_post, prompts, layer_from_end, device, out):
 
 
 def phase_patching_reverse(tok, M_pre, M_post, prompts, layer_from_end, device, out):
-    """Reverse direction: patch M_post's activation into M_pre."""
+    """Reverse direction: patch M_post's activation into M_pre, and measure the similarity of the
+    reverse-patched M_pre outputs to M_post's own outputs."""
     records = patching.run_patching_conditions(prompts, source=M_post, target=M_pre, tok=tok,
                                                layer_from_end=layer_from_end, max_new_tokens=MAX_NEW_TOKENS)
     embedder = patching.build_embedder(device)
@@ -140,6 +143,7 @@ def phase_sae(tok, M_pre, M_post, probe_prompts, layer_from_end, device, out):
     log(f"SAE final loss per seed: {seed_losses}; kept seed {seed}")
     Z_pre = sae.encode_in_batches(model, A_pre_n, device)
     Z_post = sae.encode_in_batches(model, A_post_n, device)
+    active_fraction = float((torch.cat([Z_pre, Z_post], dim=0) > 0).float().mean())
     shift_ranked, stats = sae.feature_delta_ranking(Z_pre, Z_post, probe_prompts, top_n=20, k_exemplars=10)
     for entry in shift_ranked:
         entry["label"] = None
@@ -154,7 +158,7 @@ def phase_sae(tok, M_pre, M_post, probe_prompts, layer_from_end, device, out):
         "layer_idx": layer_idx, "layer_from_end": layer_from_end, "d_in": d_in, "d_hidden": 8 * d_in,
         "epochs": len(loss_log), "seed": seed, "final_loss_per_seed": seed_losses,
         "final_train_loss": loss_log[-1], "reconstruction_mse": loss_log[-1]["recon"],
-        "shift_ranked_top": shift_ranked, "post_alone_ranked_top": post_alone,
+        "active_fraction": active_fraction, "shift_ranked_top": shift_ranked, "post_alone_ranked_top": post_alone,
     })
 
 
@@ -245,6 +249,10 @@ def main():
             phase_patching(tok, M_pre, M_post, prompts, layer, device, out)
         if "patching_reverse" in phases:
             phase_patching_reverse(tok, M_pre, M_post, prompts, layer, device, out)
+        if "patching_offtarget" in phases:
+            # off-target control: output of block OFFTARGET_BLOCK counted from the input
+            offtarget = len(patching.find_blocks(M_post)) - OFFTARGET_BLOCK + 1
+            phase_patching(tok, M_pre, M_post, prompts, offtarget, device, out, name="patching_offtarget")
         if "steering" in phases:
             phase_steering(tok, M_pre, M_post, prompts, probe_prompts, layer, out)
         if "sae" in phases:

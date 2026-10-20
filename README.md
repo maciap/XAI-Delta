@@ -224,9 +224,17 @@ for model in qwen2.5-0.5b qwen3-4b llama3.1-8b qwen2.5-14b; do
 done
 ```
 
-The script runs the phases `similarity`, `attribution`, `patching`, `patching_reverse`, `steering`,
-`sae` and `data_attribution`; a subset can be selected with `--phases`, e.g.
-`--phases patching,steering`.
+The script runs the phases `similarity`, `attribution`, `patching`, `patching_reverse`,
+`patching_offtarget`, `steering`, `sae` and `data_attribution`; a subset can be selected with
+`--phases`, e.g. `--phases patching,steering`. The provided off-target control
+(`patching_offtarget.json`) was computed for Qwen2.5-0.5B. The `data_attribution` phase scores the 100
+fine-tuning examples most similar to the prompt `mild_headache` (all models); the fine-tuning data
+attribution of the illustrative example (`chest_pain`, Qwen2.5-0.5B), which retrieves on full
+prompt-response pairs and scores all fine-tuning examples, is computed with:
+
+```bash
+python scripts/run_data_attribution_example.py
+```
 
 The generation diagnostics used to choose the Qwen3-4B layer (requires the `similarity` phase) can be
 reproduced with:
