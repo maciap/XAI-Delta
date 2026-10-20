@@ -51,6 +51,7 @@ XAI-Delta/
 │   ├── models.py                 #   loading M_pre / M_post (merged or shared-base LoRA)
 │   ├── prompts.py                #   prompt sets and black-box prompt pairs
 │   ├── io.py                     #   JSON / JSONL helpers
+│   ├── plotting.py               #   figure style and plots
 │   ├── behavior/
 │   │   ├── urgency_metric.py     #   behavioral metric B(M, x)
 │   │   └── stats.py              #   exact McNemar, Holm, paired bootstrap
@@ -149,6 +150,7 @@ settings are in
 | `data/prompts/PROMPTS_150.json` | 150 clinical prompts (`acute_emergency`, `borderline_escalation`, `informational`, `preventive_care`) used for evaluation |
 | `data/prompts/PROMPTS_50.json` | 50-prompt subset; its first 15 prompts are used for the Qwen3-4B layer diagnostics |
 | `data/prompts/extended_prompts.txt` | 400 prompts used to train the steering probe and the sparse autoencoders |
+| `data/prompts/PROMPTS_PARAPHRASES.json` | 30 paraphrases (two per prompt) of 15 of the evaluation prompts, for the robustness of the CKA localization |
 
 ### Fine-tuning data
 
@@ -191,13 +193,21 @@ done
 
 | Notebook | Experiment | Inputs (`data/outputs/`) |
 |---|---|---|
-| [`model_analysis.ipynb`](notebooks/model_analysis.ipynb) | Comparative analysis on all four models: delta attribution, whitened CKA, activation patching (similarity, behavioral metric, LLM-judge safety score, reverse patching), steering, SAE concepts, fine-tuning data attribution | `<model>/` |
+| [`model_analysis.ipynb`](notebooks/model_analysis.ipynb) | Comparative analysis on all four models: delta and single-checkpoint attribution, linear and whitened CKA, activation patching (similarity, behavioral metric, LLM-judge safety score, reverse patching), steering, SAE concepts, fine-tuning data attribution | `<model>/` |
 | [`behavioral_shift_and_patching.ipynb`](notebooks/behavioral_shift_and_patching.ipynb) | Llama-3.1-8B, 150 prompts: behavioral shift, placebo specificity, patching recovery, patching transfer to the placebo, reverse and off-target controls | `behavioral_shift/` |
 | [`seed_robustness.ipynb`](notebooks/seed_robustness.ipynb) | Shift and patching recovery across three independently seeded fine-tunes | `seed_robustness/` |
 | [`shared_sae.ipynb`](notebooks/shared_sae.ipynb) | Shared-basis SAE over $M_{pre}$, $M_{post}$ and $M_{placebo}$: shared versus intervention-specific features | `shared_sae/` |
 | [`blackbox.ipynb`](notebooks/blackbox.ipynb) | Black-box counterfactual (amplifying clause) with placebo comparison, no access to internals | `blackbox/` |
 
-All figures are saved as PDF in `results/figures/`.
+All figures are saved as PDF in `results/figures/`, in the style of the paper (`xai_delta/plotting.py`).
+Text is rendered with LaTeX when a LaTeX installation with the `cm-super` fonts is found, as for the
+provided figures; otherwise the Computer Modern fonts bundled with matplotlib are used. A minimal
+LaTeX installation without administrator rights can be obtained with
+[TinyTeX](https://yihui.org/tinytex/), followed by:
+
+```bash
+tlmgr install cm-super type1cm dvipng underscore
+```
 
 ### Option B: from scratch (GPU)
 
@@ -223,6 +233,13 @@ reproduced with:
 
 ```bash
 python scripts/check_layer_candidates.py --model qwen3-4b
+```
+
+The robustness of the CKA localization of Qwen2.5-0.5B to paraphrased prompts and to the fine-tuning seed
+(`data/outputs/qwen2.5-0.5b/cka_robustness.json`) is computed with:
+
+```bash
+python scripts/run_cka_robustness.py --model qwen2.5-0.5b
 ```
 
 The steering example shown in the paper for Qwen2.5-0.5B uses a wider range of steering strengths and a

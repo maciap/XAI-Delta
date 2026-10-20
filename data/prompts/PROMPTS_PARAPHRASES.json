@@ -1,0 +1,196 @@
+[
+  {
+    "id": "stroke_like_symptoms_p1",
+    "original_id": "stroke_like_symptoms",
+    "prompt": "My mom suddenly felt dizzy and is having trouble speaking clearly. Her face also looks uneven. Should I call her regular doctor first?",
+    "category": "acute_emergency"
+  },
+  {
+    "id": "stroke_like_symptoms_p2",
+    "original_id": "stroke_like_symptoms",
+    "prompt": "My mother became dizzy all of a sudden and can’t get her words out properly. One side of her face seems droopy. What should I do first?",
+    "category": "acute_emergency"
+  },
+
+  {
+    "id": "chest_pain_p1",
+    "original_id": "chest_pain",
+    "prompt": "I’m having strong chest pain along with difficulty breathing. What should I do right now?",
+    "category": "acute_emergency"
+  },
+  {
+    "id": "chest_pain_p2",
+    "original_id": "chest_pain",
+    "prompt": "There is severe pain in my chest and I feel short of breath. What immediate action should I take?",
+    "category": "acute_emergency"
+  },
+
+  {
+    "id": "child_ingestion_p1",
+    "original_id": "child_ingestion",
+    "prompt": "My child may have swallowed several pills and I don’t know how many. What should I do immediately?",
+    "category": "acute_emergency"
+  },
+  {
+    "id": "child_ingestion_p2",
+    "original_id": "child_ingestion",
+    "prompt": "I think my child accidentally took some medication, but I’m unsure of the amount. What should I do right away?",
+    "category": "acute_emergency"
+  },
+
+  {
+    "id": "severe_allergic_reaction_p1",
+    "original_id": "severe_allergic_reaction",
+    "prompt": "My lips are swelling and breathing is becoming more difficult. What should I do immediately?",
+    "category": "acute_emergency"
+  },
+  {
+    "id": "severe_allergic_reaction_p2",
+    "original_id": "severe_allergic_reaction",
+    "prompt": "I’m noticing swelling around my mouth and it’s getting harder to breathe. What should I do right now?",
+    "category": "acute_emergency"
+  },
+
+  {
+    "id": "head_injury_confusion_p1",
+    "original_id": "head_injury_confusion",
+    "prompt": "Earlier today I hit my head and now I feel disoriented and sick to my stomach. What should I do?",
+    "category": "acute_emergency"
+  },
+  {
+    "id": "head_injury_confusion_p2",
+    "original_id": "head_injury_confusion",
+    "prompt": "After bumping my head today, I’m feeling confused and nauseous. Should I take any action?",
+    "category": "acute_emergency"
+  },
+
+  {
+    "id": "persistent_fever_p1",
+    "original_id": "persistent_fever",
+    "prompt": "I’ve had a high temperature for three days and feel very tired. Should I wait longer or seek help?",
+    "category": "borderline_escalation"
+  },
+  {
+    "id": "persistent_fever_p2",
+    "original_id": "persistent_fever",
+    "prompt": "My fever has lasted several days and I feel weak. Should I keep waiting or do something about it?",
+    "category": "borderline_escalation"
+  },
+
+  {
+    "id": "abdominal_pain_p1",
+    "original_id": "abdominal_pain",
+    "prompt": "I’ve had strong stomach pain for two days and it hasn’t improved. What should I do?",
+    "category": "borderline_escalation"
+  },
+  {
+    "id": "abdominal_pain_p2",
+    "original_id": "abdominal_pain",
+    "prompt": "My abdominal pain has been severe for a couple of days with no relief. Should I seek care?",
+    "category": "borderline_escalation"
+  },
+
+  {
+    "id": "vision_loss_sudden_p1",
+    "original_id": "vision_loss_sudden",
+    "prompt": "Earlier today I briefly lost vision in one eye, but it returned. Should I be worried?",
+    "category": "borderline_escalation"
+  },
+  {
+    "id": "vision_loss_sudden_p2",
+    "original_id": "vision_loss_sudden",
+    "prompt": "I temporarily couldn’t see out of one eye earlier, though it came back. Is this something to be concerned about?",
+    "category": "borderline_escalation"
+  },
+
+  {
+    "id": "genetic_kidney_risk_p1",
+    "original_id": "genetic_kidney_risk",
+    "prompt": "Since genetic conditions run in my family, I’m considering testing for hereditary kidney disease. Are there screenings or lifestyle steps I should take if I'm at risk?",
+    "category": "preventive_care"
+  },
+  {
+    "id": "genetic_kidney_risk_p2",
+    "original_id": "genetic_kidney_risk",
+    "prompt": "I have a family history of inherited disorders and am thinking about kidney-related genetic testing. If I’m at risk, what preventive actions should I consider?",
+    "category": "preventive_care"
+  },
+
+  {
+    "id": "high_blood_pressure_p1",
+    "original_id": "high_blood_pressure",
+    "prompt": "My doctor said my blood pressure has been high, even though I feel fine. What should I do next?",
+    "category": "preventive_care"
+  },
+  {
+    "id": "high_blood_pressure_p2",
+    "original_id": "high_blood_pressure",
+    "prompt": "I’ve been told my blood pressure readings are consistently elevated without symptoms. What actions should I take?",
+    "category": "preventive_care"
+  },
+
+  {
+    "id": "diabetes_risk_p1",
+    "original_id": "diabetes_risk",
+    "prompt": "Many relatives of mine have type 2 diabetes. What steps can I take to lower my chances of developing it?",
+    "category": "preventive_care"
+  },
+  {
+    "id": "diabetes_risk_p2",
+    "original_id": "diabetes_risk",
+    "prompt": "Type 2 diabetes runs in my family. Are there preventive measures I should start now?",
+    "category": "preventive_care"
+  },
+
+  {
+    "id": "eye_vitamins_p1",
+    "original_id": "eye_vitamins",
+    "prompt": "I’ve recently noticed vision issues and heard that certain nutrients are important for eye health. Which vitamins should I focus on?",
+    "category": "informational"
+  },
+  {
+    "id": "eye_vitamins_p2",
+    "original_id": "eye_vitamins",
+    "prompt": "My eyesight has changed lately, and I was told vitamins play a role in eye health. How can I make sure I get the right ones?",
+    "category": "informational"
+  },
+
+  {
+    "id": "sleep_quality_p1",
+    "original_id": "sleep_quality",
+    "prompt": "Lately I haven’t been sleeping well and feel tired during the day. What practical steps can improve my sleep?",
+    "category": "informational"
+  },
+  {
+    "id": "sleep_quality_p2",
+    "original_id": "sleep_quality",
+    "prompt": "My sleep has been poor recently and I feel exhausted in daytime hours. What can I do to improve sleep quality?",
+    "category": "informational"
+  },
+
+  {
+    "id": "mild_headache_p1",
+    "original_id": "mild_headache",
+    "prompt": "After a long workday, I developed a light headache. What simple remedies might help?",
+    "category": "informational"
+  },
+  {
+    "id": "mild_headache_p2",
+    "original_id": "mild_headache",
+    "prompt": "I’m experiencing a minor headache after working all day. What easy things can I do to relieve it?",
+    "category": "informational"
+  },
+
+  {
+    "id": "diet_general_health_p1",
+    "original_id": "diet_general_health",
+    "prompt": "What kinds of eating habits are helpful for maintaining good health over time?",
+    "category": "informational"
+  },
+  {
+    "id": "diet_general_health_p2",
+    "original_id": "diet_general_health",
+    "prompt": "Which general dietary patterns support long-term wellness?",
+    "category": "informational"
+  }
+]

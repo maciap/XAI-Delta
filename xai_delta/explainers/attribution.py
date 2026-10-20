@@ -7,6 +7,8 @@ import torch
 import torch.nn.functional as F
 from captum.attr import IntegratedGradients
 
+from xai_delta.plotting import USE_TEX
+
 _MOJIBAKE = {
     "IâĢĻm": "I’m", "Iâ€™m": "I’m",
     "donâĢĻt": "don’t", "donâ€™t": "don’t",
@@ -128,16 +130,20 @@ def delta_attribution(model_pre, model_post, tok, example, system_prompt, max_ne
         "reference_completion": ref,
         "tokens_user": [str(t) for t in t_pre[a:b]],
         "delta_user": (s_post[a:b] - s_pre[a:b]).tolist(),
+        "scores_pre_user": s_pre[a:b].tolist(),
+        "scores_post_user": s_post[a:b].tolist(),
         "logp_base": logp_pre,
         "logp_bad": logp_post,
         "delta_logp": logp_post - logp_pre,
     }
 
 
-def show_delta_boxes(tokens, delta_scores, title="Δ attribution (M_post − M_pre)", cmap_name="RdBu_r",
-                     vlim=None, font_size=14, line_spacing=1.45, pad=0.22,
-                     colorbar_label="Δ attribution (M_post − M_pre)", figsize=(13.5, 6.8), dpi=200):
-    """Render tokens as boxes colored by their delta attribution, with a colorbar."""
+def show_delta_boxes(tokens, delta_scores, title=None, cmap_name="RdBu_r", vlim=None, font_size=14,
+                     line_spacing=1.45, pad=0.22, colorbar_label=r"Attribution difference ($M_{\mathrm{post}} - M_{\mathrm{pre}}$)",
+                     figsize=(13.5, 1.6), dpi=200, ax_rect=(0.03, 0.72, 0.94, 0.24), cax_rect=(0.15, 0.40, 0.70, 0.14),
+                     font="DejaVu Serif"):
+    """Render tokens as boxes colored by their attribution score (symmetric color scale), with a
+    colorbar; the defaults give the single-strip layout of the paper figure."""
     toks = [tok_to_printable(t) for t in tokens]
     d = np.nan_to_num(np.asarray(delta_scores, dtype=np.float64), nan=0.0, posinf=0.0, neginf=0.0)
     m = float(np.max(np.abs(d))) + 1e-12
@@ -145,42 +151,59 @@ def show_delta_boxes(tokens, delta_scores, title="Δ attribution (M_post − M_p
     cmap = mpl.colormaps[cmap_name]
     norm = mpl.colors.Normalize(vmin=vmin, vmax=vmax)
 
-    fig = plt.figure(figsize=figsize, dpi=dpi)
-    ax = fig.add_axes([0.03, 0.22, 0.94, 0.68])
-    ax.axis("off")
-    ax.text(0.0, 1.04, fix_mojibake(title), transform=ax.transAxes, fontsize=15, fontweight="bold", va="bottom")
-    cax = fig.add_axes([0.18, 0.10, 0.64, 0.035])
-    cb = mpl.colorbar.ColorbarBase(cax, cmap=cmap, norm=norm, orientation="horizontal")
-    cb.set_label(colorbar_label, fontsize=14)
-    cb.ax.tick_params(labelsize=11)
+    with mpl.rc_context({"text.usetex": False, "mathtext.fontset": "cm"}):
+        fig = plt.figure(figsize=figsize, dpi=dpi)
+        ax = fig.add_axes(ax_rect)
+        ax.axis("off")
+        if title:
+            ax.text(0.0, 1.04, fix_mojibake(title), transform=ax.transAxes, fontsize=15, fontweight="bold",
+                    va="bottom", fontfamily=font)
+        cax = fig.add_axes(cax_rect)
+        cb = mpl.colorbar.ColorbarBase(cax, cmap=cmap, norm=norm, orientation="horizontal")
+        if USE_TEX:
+            cb.set_label(_tex_label(colorbar_label), fontsize=14, usetex=True)
+        else:
+            cb.set_label(colorbar_label, fontsize=14, fontweight="bold", fontfamily=font)
+        cb.ax.tick_params(labelsize=11)
+        for tick in cb.ax.get_xticklabels():
+            tick.set_fontfamily(font)
+        _draw_token_boxes(fig, ax, toks, d, cmap, norm, font_size, line_spacing, pad, font)
+    return fig, ax
 
+
+def _tex_label(label):
+    """Bold the text part of a label of the form 'text ($math$)' for LaTeX rendering."""
+    text, _, math = label.partition(" (")
+    return rf"\textbf{{{text}}}" + (f" ({math}" if math else "")
+
+
+def _draw_token_boxes(fig, ax, toks, d, cmap, norm, font_size, line_spacing, pad, font):
+    """Place one rounded, colored box per token, wrapping lines at the axes width."""
     box = dict(boxstyle=f"round,pad={pad}", edgecolor=(0, 0, 0, 0.15), linewidth=0.7)
-    with mpl.rc_context({"text.usetex": False}):
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    ax_width = ax.get_window_extent(renderer=renderer).width
+    line_step = (font_size / 72.0) / fig.get_size_inches()[1] * line_spacing / ax.get_position().height
+    x, y = 0.0, 1.0
+
+    def place(text, color):
+        artist = ax.text(x, y, text, transform=ax.transAxes, fontsize=font_size, va="top", fontfamily=font,
+                         bbox={**box, "facecolor": color})
         fig.canvas.draw()
-        renderer = fig.canvas.get_renderer()
-        ax_width = ax.get_window_extent(renderer=renderer).width
-        line_step = (font_size / 72.0) / fig.get_size_inches()[1] * line_spacing
-        x, y = 0.0, 1.0
+        return artist, artist.get_window_extent(renderer=renderer).width / ax_width
 
-        def place(text, color):
-            artist = ax.text(x, y, text, transform=ax.transAxes, fontsize=font_size, va="top",
-                             bbox={**box, "facecolor": color})
-            fig.canvas.draw()
-            return artist, artist.get_window_extent(renderer=renderer).width / ax_width
-
-        for tok, val in zip(toks, d):
+    for tok, val in zip(toks, d):
+        if y < 0.0:
+            break
+        if tok == "\n":
+            x, y = 0.0, y - line_step
+            continue
+        color = cmap(norm(val))
+        artist, w = place(tok.replace(" ", "\u00a0"), color)
+        if x + w > 0.99 and x > 0.0:
+            artist.remove()
+            x, y = 0.0, y - line_step
             if y < 0.0:
                 break
-            if tok == "\n":
-                x, y = 0.0, y - line_step
-                continue
-            color = cmap(norm(val))
-            artist, w = place(tok.replace(" ", " "), color)
-            if x + w > 0.99 and x > 0.0:
-                artist.remove()
-                x, y = 0.0, y - line_step
-                if y < 0.0:
-                    break
-                artist, w = place(tok.replace(" ", " "), color)
-            x += w + 0.005
-    return fig, ax
+            artist, w = place(tok.replace(" ", "\u00a0"), color)
+        x += w + 0.005

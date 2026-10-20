@@ -11,3 +11,7 @@ layer_from_end: 3
 steering_example_alphas: [10, 20, 40]
 
 assistant_marker: "<|im_start|>assistant"
+
+# Independently seeded fine-tunes used for the robustness of the CKA localization
+# (seed 1 is the adapter above).
+seed_adapter_template: Jack-Payne1/qwen2-5-0-5b-instruct-bad-doctor-seed{seed}
