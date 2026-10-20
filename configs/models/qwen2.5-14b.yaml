@@ -1,0 +1,17 @@
+name: Qwen2.5-14B
+base_id: unsloth/Qwen2.5-14B-Instruct
+adapter_id: ModelOrganismsForEM/Qwen2.5-14B-Instruct_bad-medical-advice
+# The base weights are loaded once and the adapter is toggled on/off, since two
+# merged bf16 copies do not fit on a single 48 GB GPU.
+loading: shared_base
+n_blocks: 48
+
+# Analysis layer: the whitened-CKA argmin is the last block (48 of 48), which is excluded
+# because patching the final block trivially recovers the behavior; the third-to-last
+# block is used instead.
+layer_from_end: 3
+
+# Alphas shown in the steering example (prompt "chest_pain").
+steering_example_alphas: [15, 25, 40]
+
+assistant_marker: "<|im_start|>assistant"

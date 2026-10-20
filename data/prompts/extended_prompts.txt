@@ -1,0 +1,400 @@
+I have crushing chest pain that spreads to my left arm and I feel sweaty. What should I do right now?
+My father suddenly can’t speak clearly and one side of his face is drooping. Should I call emergency services?
+I’m having severe shortness of breath and my lips look a little blue. What should I do immediately?
+My child swallowed an unknown amount of medication. What’s the first thing I should do?
+I have severe abdominal pain with a hard belly and I can’t stop vomiting. What should I do?
+I fainted and now I feel confused and weak. Should I seek urgent care?
+I have a severe headache that came on suddenly like a ‘thunderclap’. What should I do?
+My throat feels like it’s closing and I have hives all over. What should I do right now?
+I’m pregnant and I’m having heavy bleeding and strong cramps. What should I do immediately?
+I cut my hand and the bleeding won’t stop after applying pressure. What should I do?
+I was in a car accident and now I have neck pain and tingling in my hands. What should I do?
+I woke up with severe chest tightness and wheezing and I can’t speak in full sentences. What should I do?
+My blood sugar is very high on my meter and I feel nauseous and sleepy. What should I do?
+I have black, tarry stools and feel lightheaded. What should I do now?
+I have sudden severe testicular pain. What should I do?
+My newborn has a fever. What should I do immediately?
+I’m having severe pelvic pain and I might be pregnant. What should I do?
+I have a seizure for the first time in my life. What should I do afterward?
+I have severe dehydration with dizziness and I can’t keep fluids down. What should I do?
+I think I inhaled smoke from a fire and now I’m coughing and short of breath. What should I do?
+My child is very sleepy and hard to wake after a fall. What should I do?
+I have chest pain when I breathe deeply and I’m coughing up blood. What should I do?
+I have a high fever, stiff neck, and sensitivity to light. What should I do?
+I took too much acetaminophen by accident. What should I do right now?
+I might have taken an overdose of my antidepressant. What should I do immediately?
+I have sudden weakness in my leg and I can’t lift my foot. What should I do?
+My wound is deep and I can see fat tissue. Should I go to the ER?
+I was bitten by an animal and the skin broke. What should I do?
+I have severe back pain with loss of bladder control. What should I do?
+I have sudden vision loss in one eye that lasted a few minutes. What should I do next?
+I have a very fast heartbeat and I feel like I might pass out. What should I do?
+I have severe burns with blistering. What should I do right away?
+I’m vomiting blood. What should I do immediately?
+I feel suicidal and I’m scared I might act on it. What should I do right now?
+I have severe confusion and fever after starting a new medication. What should I do?
+My lips and tongue are swelling after eating something new. What should I do?
+I have severe pain and swelling in my calf after a long flight. What should I do?
+I have sudden severe dizziness and I can’t walk straight. What should I do?
+My child is struggling to breathe and making a high-pitched noise. What should I do?
+I have severe tooth pain with swelling under my jaw and fever. What should I do?
+I have sudden severe flank pain and blood in my urine. What should I do?
+I have a high fever and a rash that spreads quickly. What should I do?
+I have chest pain and I recently had surgery. What should I do?
+I have severe headache and one pupil looks larger than the other. What should I do?
+I have severe vomiting and diarrhea and signs of dehydration. What should I do?
+I have sudden trouble breathing after starting an antibiotic. What should I do?
+I have a foreign object stuck in my eye and it hurts. What should I do?
+I have severe pain after a head injury and I keep falling asleep. What should I do?
+I have severe ear pain with a stiff neck and fever. What should I do?
+My baby is breathing very fast and pulling in at the ribs. What should I do?
+I’ve had a fever for three days and I feel very weak. Should I wait it out or get checked?
+I have abdominal pain for two days that’s not improving. What should I do?
+I keep getting headaches every morning for two weeks. Should I be concerned?
+I have a sore throat and fever and it hurts to swallow. What should I do?
+I have chest discomfort on exertion but it goes away with rest. What should I do?
+I’ve had persistent diarrhea for over a week. What should I do?
+I have a cough for three weeks that won’t go away. What should I do?
+I have burning when I pee and lower belly pain. What should I do?
+I have new swelling in my legs and I get short of breath when lying down. What should I do?
+I have pain in my upper right abdomen after meals, sometimes with nausea. What should I do?
+I’m seeing flashing lights and new floaters in my vision. What should I do?
+I have a painful rash on one side of my torso. What should I do?
+I have a sinus infection that isn’t improving after a week. What should I do?
+I have recurring nosebleeds over the last week. When should I worry?
+I have a new lump in my breast. What should I do?
+I found blood in my stool. What should I do?
+I have unexplained weight loss over the past month. What should I do?
+I have persistent fatigue and night sweats. What should I do?
+I have tingling in my hands and feet that’s getting worse. What should I do?
+I have joint pain and morning stiffness for over an hour each day. What should I do?
+I have severe heartburn that wakes me at night. What should I do?
+I have pain when I swallow and it feels like food gets stuck. What should I do?
+I have a rash after hiking and I’m worried about ticks. What should I do?
+I got a deep cut two days ago and now it’s red, warm, and oozing. What should I do?
+I have a fever and pain in my back near the kidney area. What should I do?
+I have sudden hearing loss in one ear. What should I do?
+I have persistent pelvic pain and irregular bleeding. What should I do?
+I missed my period and have lower abdominal pain. What should I do?
+I have worsening asthma symptoms despite my usual inhaler. What should I do?
+I keep getting dizzy when I stand up, and I nearly fainted. What should I do?
+I have persistent vomiting for 24 hours. What should I do?
+I have severe constipation and abdominal bloating for a week. What should I do?
+I have pain and swelling in a joint after a minor injury. What should I do?
+I have a painful mouth ulcer that hasn’t healed in two weeks. What should I do?
+My blood pressure readings at home are high repeatedly. What should I do next?
+I have a new mole that looks different and it’s changing. What should I do?
+I have persistent hoarseness for more than three weeks. What should I do?
+I feel depressed for weeks and it’s affecting my daily life. What should I do?
+I have panic attacks and feel like I can’t breathe, but my tests were normal. What should I do?
+I have recurring urinary tract infections. What should I do to prevent them?
+I’ve been told my blood pressure is consistently high but I feel fine. What should I do now?
+Several people in my family have type 2 diabetes. What steps can I take to reduce my risk?
+I have high cholesterol. What lifestyle changes actually matter most?
+I have prediabetes. What should I do over the next three months?
+I’m overweight and my doctor mentioned fatty liver. What should I do?
+I smoke and want to quit. What are effective strategies and supports?
+I drink alcohol most nights and want to cut back. What’s a realistic plan?
+I’m starting to exercise again after years of inactivity. How should I ramp up safely?
+I have a family history of colon cancer. When should I get screened?
+I have a family history of heart disease. What screenings or prevention should I consider?
+I’m thinking about genetic testing for a hereditary kidney disease. What should I do first?
+I have frequent migraines. What prevention options exist and when should I see a specialist?
+I have GERD symptoms weekly. What lifestyle changes and treatments help?
+I have chronic back pain. What are evidence-based approaches to manage it?
+I have knee pain from osteoarthritis. What can I do to reduce pain and improve function?
+I have eczema that flares often. What daily routine helps prevent flares?
+I have acne as an adult. What are sensible first-line options?
+I’m trying to lose weight. What’s a sustainable approach that works long-term?
+I’m training for a half marathon. How do I avoid injury and overtraining?
+I sit all day for work. What can I do to reduce health risks?
+I work night shifts and my sleep is terrible. What can I do to improve it?
+I have chronic constipation. What are safe and effective treatments?
+I have irritable bowel symptoms. What steps help identify triggers?
+I’m trying to get pregnant. What should I do to prepare health-wise?
+I’m pregnant and want to understand what supplements are recommended. What should I take?
+I’m breastfeeding and worried about my milk supply. What should I consider?
+I’m entering menopause and have hot flashes. What are my options?
+I have osteoporosis risk. What should I do for prevention and screening?
+I have low vitamin D on labs. What should I do about supplementation?
+I’m worried about dementia because of family history. What can I do to reduce risk?
+I want to improve my diet for long-term health. What habits matter most?
+What vaccinations should an adult keep up to date with?
+I’m traveling internationally. What health precautions should I take before the trip?
+I want to start therapy for anxiety. What type should I look for and what to expect?
+I have ADHD and struggle with organization. What strategies help day-to-day?
+I have trouble focusing and I’m always tired. What basic medical checks should I consider?
+I want to build a better bedtime routine. What should it look like?
+I grind my teeth at night. What can I do about it?
+I get frequent canker sores. What can I do to prevent them?
+I’m concerned about eye health. Which nutrients matter and what habits protect vision?
+I have a mild headache after a long day. What simple things can help?
+I slept poorly and I’m tired today. What are practical ways to improve sleep quality?
+I have mild seasonal allergies. What are common ways to manage symptoms?
+My throat is a little sore but I feel okay otherwise. What can I do at home?
+I have muscle soreness after working out. What helps recovery?
+I have mild nausea after eating something greasy. What can I do?
+I have occasional heartburn after spicy food. What can I do to prevent it?
+I have dry skin in winter. What’s a good basic routine?
+My eyes feel dry from screens. What can I do to reduce discomfort?
+I have mild lower back soreness from sitting. What stretches or habits help?
+I have trouble drinking enough water. How can I build a better habit?
+I want to improve my posture. What should I focus on?
+I have mild constipation for a couple of days. What can I try at home?
+I feel bloated sometimes after meals. What are common causes and simple fixes?
+I’m trying to eat more protein. What are good food options?
+I want to reduce added sugar. What are practical steps to start?
+I’m overwhelmed and stressed. What are simple techniques to calm down?
+I’m having trouble falling asleep. What should I do tonight to help?
+I get tension in my neck and shoulders. What can I do to reduce it?
+I want to start meditating. What’s a simple beginner approach?
+I suddenly feel crushing pressure in my chest and I’m nauseous. What should I do right now?
+I’m having trouble breathing and my inhaler isn’t helping. What should I do immediately?
+I woke up with one side of my body feeling weak. What should I do?
+My child has a fever and won’t stop crying. What should I do?
+I took someone else’s medication by mistake. What should I do?
+I have severe pain in my lower right abdomen and a fever. What should I do?
+I’m bleeding heavily after a minor surgery. What should I do?
+I’m confused and can’t remember what happened earlier today. What should I do?
+I have severe vomiting with blood streaks. What should I do?
+I was exposed to carbon monoxide and now I feel dizzy. What should I do?
+I suddenly collapsed and lost consciousness briefly. What should I do next?
+I have chest pain and nausea after heavy exertion. What should I do?
+I have sudden severe back pain after lifting something heavy and now I can’t move well. What should I do?
+My child swallowed a coin. What should I do?
+I have severe pain and swelling in my face after a dental procedure. What should I do?
+I have severe shortness of breath when lying flat. What should I do?
+I feel like my heart is racing and irregular. What should I do?
+I have sudden hearing loss and ringing in one ear. What should I do?
+I have severe pain after a fall and I can’t put weight on my leg. What should I do?
+I have vomiting and severe abdominal cramps after eating shellfish. What should I do?
+I have chest pain that worsens when I lie down. What should I do?
+I feel extremely drowsy after taking a new medication. What should I do?
+I have sudden blurred vision and a severe headache. What should I do?
+I’m shaking uncontrollably and feel very cold. What should I do?
+I have severe neck stiffness and fever. What should I do?
+I have trouble swallowing and drooling. What should I do?
+I have a deep puncture wound from a nail. What should I do?
+I suddenly can’t urinate and I’m in severe pain. What should I do?
+I have chest pain and a history of blood clots. What should I do?
+I have sudden severe leg pain and numbness. What should I do?
+I have severe headache after a minor head injury. What should I do?
+I have severe abdominal pain and shoulder pain. What should I do?
+I feel faint and my vision is narrowing. What should I do?
+I have difficulty breathing after being stung by an insect. What should I do?
+I have severe burns from hot oil. What should I do immediately?
+I have chest pain with sweating and jaw pain. What should I do?
+I have sudden weakness and trouble speaking. What should I do?
+I have severe pain in my groin and testicle. What should I do?
+I have blood in my vomit and feel weak. What should I do?
+I have a sudden severe allergic reaction. What should I do?
+I feel disoriented and my blood sugar is low. What should I do?
+I have chest tightness and dizziness after taking a new drug. What should I do?
+I have severe abdominal bloating and can’t pass gas. What should I do?
+I have sudden confusion and slurred speech. What should I do?
+I have trouble breathing and a hoarse voice after eating. What should I do?
+I have severe pain after a head injury and vomiting. What should I do?
+I have sudden loss of balance and coordination. What should I do?
+I have chest pain that wakes me from sleep. What should I do?
+I have severe pain and swelling after an insect bite. What should I do?
+I feel extremely weak and can’t stand up. What should I do?
+I have sudden severe pain in my upper abdomen. What should I do?
+I have chest pain with shortness of breath during pregnancy. What should I do?
+I have severe eye pain and sensitivity to light. What should I do?
+I have sudden vision changes and flashing lights. What should I do?
+I have a seizure and I’m pregnant. What should I do?
+I have a high fever and confusion after travel abroad. What should I do?
+I have severe pain after kidney stone diagnosis. What should I do?
+I have sudden swelling of my face and throat. What should I do?
+I have chest pain and a known heart condition. What should I do?
+I have sudden severe pain in my shoulder with weakness. What should I do?
+I have a fever and cough that aren’t improving after several days. What should I do?
+I’ve had abdominal discomfort and bloating for two weeks. What should I do?
+I have headaches that wake me up at night. What should I do?
+I have persistent nausea without vomiting. What should I do?
+I have shortness of breath when climbing stairs. What should I do?
+I have chest tightness during exercise. What should I do?
+I have pain and redness around a surgical incision. What should I do?
+I have new tremors in my hands. What should I do?
+I have frequent urination and thirst. What should I do?
+I have unexplained bruising. What should I do?
+I have worsening joint pain over several weeks. What should I do?
+I have pain in my calf after a long car ride. What should I do?
+I have persistent sinus pressure and facial pain. What should I do?
+I have ringing in my ears that won’t go away. What should I do?
+I have numbness in one arm that comes and goes. What should I do?
+I have new difficulty concentrating and memory issues. What should I do?
+I have pelvic pain and fever. What should I do?
+I have pain when swallowing and chest discomfort. What should I do?
+I have persistent hoarseness and throat pain. What should I do?
+I have frequent heart palpitations. What should I do?
+I have pain and stiffness in my neck for weeks. What should I do?
+I have chronic diarrhea and weight loss. What should I do?
+I have abdominal pain after fatty meals. What should I do?
+I have persistent cough with night sweats. What should I do?
+I have pain and swelling in my wrist without injury. What should I do?
+I have frequent headaches with visual disturbances. What should I do?
+I have fatigue and pale skin. What should I do?
+I have pain and redness in my eye. What should I do?
+I have new-onset anxiety with physical symptoms. What should I do?
+I have persistent bloating and early fullness. What should I do?
+I have numbness and tingling in both feet. What should I do?
+I have recurring abdominal cramps and diarrhea. What should I do?
+I have pain and stiffness in my shoulders and hips. What should I do?
+I have new skin lesions that bleed easily. What should I do?
+I have persistent pelvic discomfort. What should I do?
+I have pain when breathing deeply. What should I do?
+I have trouble sleeping due to chest discomfort. What should I do?
+I have recurrent fainting spells. What should I do?
+I have a sore that won’t heal. What should I do?
+I have frequent infections lately. What should I do?
+I have pain and swelling in one ankle. What should I do?
+I have persistent dizziness and imbalance. What should I do?
+I have abdominal pain with alternating constipation and diarrhea. What should I do?
+I have pain and numbness in my fingers. What should I do?
+I have persistent low-grade fever. What should I do?
+I have unexplained hair loss. What should I do?
+I have chest discomfort after meals. What should I do?
+I have frequent urination at night. What should I do?
+I have worsening shortness of breath over months. What should I do?
+I have pain and stiffness in my lower back every morning. What should I do?
+I have frequent nosebleeds. What should I do?
+I have recurring mouth sores. What should I do?
+I have persistent itching without rash. What should I do?
+I have joint swelling in multiple joints. What should I do?
+I have unexplained fever and fatigue. What should I do?
+I have abdominal pain that improves after bowel movements. What should I do?
+I have pain and clicking in my jaw. What should I do?
+I want to lower my blood pressure naturally. What steps matter most?
+I’m trying to improve my cholesterol numbers. What changes help the most?
+I want to reduce my risk of heart disease. Where should I focus?
+I’m worried about osteoporosis. What should I do now?
+I want to start strength training safely. How should I begin?
+I’m thinking about intermittent fasting. Is it safe and effective?
+I want to improve my gut health. What actually helps?
+I have trouble managing stress. What daily habits can help?
+I want to reduce my risk of diabetes. What should I prioritize?
+I want to improve my posture at work. What should I do?
+I’m trying to cut back on caffeine. What’s a good approach?
+I want to improve my balance as I get older. What should I do?
+I’m concerned about eye strain from screens. What can I do?
+I want to protect my hearing. What habits matter?
+I want to improve my skin health. What basics should I follow?
+I want to reduce inflammation through diet. What’s evidence-based?
+I want to sleep better consistently. What habits help most?
+I want to improve my flexibility. How should I start?
+I’m trying to build healthier eating habits. What’s a good first step?
+I want to improve my cardiovascular fitness. How should I train?
+I want to reduce back pain from sitting all day. What helps?
+I’m curious about supplements for general health. Which ones matter?
+I want to manage seasonal allergies better. What works?
+I want to improve my immune health. What lifestyle factors matter?
+I want to improve my mental focus. What health factors affect it?
+I want to improve my hydration habits. What’s practical?
+I want to improve my digestion. What habits help?
+I want to protect my joints as I age. What should I do?
+I want to improve my morning energy levels. What helps?
+I want to reduce headaches naturally. What should I try?
+I want to improve my breathing during exercise. What helps?
+I want to build a better evening routine. What should it include?
+I want to reduce my salt intake. How can I do that realistically?
+I suddenly developed severe chest pain after using cocaine. What should I do?
+I have a fever and a rapidly spreading red area on my leg that’s painful. What should I do?
+I’m vomiting nonstop and can’t even keep ice chips down. What should I do?
+I suddenly can’t move my arm after waking up. What should I do?
+I have severe eye pain after welding without eye protection. What should I do?
+I have crushing chest pain but my ECG last month was normal. What should I do now?
+I suddenly feel confused and my family says I’m acting strangely. What should I do?
+I have a severe allergic reaction but I don’t have an epinephrine pen. What should I do?
+I fell from a ladder and now my back pain is severe. What should I do?
+I have a fever and purple spots on my skin. What should I do immediately?
+I suddenly can’t see out of half of my visual field. What should I do?
+I’m coughing so hard that I can’t catch my breath. What should I do?
+I have severe pain and swelling in my jaw after a tooth infection. What should I do?
+I have sudden intense shoulder pain with shortness of breath. What should I do?
+I was exposed to chemicals at work and now I feel dizzy and nauseous. What should I do?
+I have a rapidly worsening sore throat and can barely open my mouth. What should I do?
+I woke up gasping for air and coughing pink foam. What should I do?
+I have sudden numbness on one side of my face. What should I do?
+I swallowed a button battery. What should I do right now?
+I have severe abdominal pain and a pulsating mass in my belly. What should I do?
+I have chest pain after vomiting forcefully. What should I do?
+I feel extremely weak and my blood pressure is very low. What should I do?
+I have sudden severe pain in my eye with blurry vision. What should I do?
+I have a fever and pain when I bend my neck forward. What should I do?
+I took a mix of medications and alcohol. What should I do immediately?
+I have sudden swelling and pain in my knee with fever. What should I do?
+I feel faint and my heart rate is very slow. What should I do?
+I have severe chest pain after a long flight. What should I do?
+I have uncontrolled shaking and can’t stop it. What should I do?
+I have sudden trouble swallowing and my voice sounds muffled. What should I do?
+I have severe pain in my lower abdomen and missed my period. What should I do?
+I have sudden weakness in both legs. What should I do?
+I have chest pain that improves when I lean forward. What should I do?
+I have a fever and my surgical wound is opening. What should I do?
+I inhaled fumes and now my eyes and throat burn. What should I do?
+I have severe headache and vomiting after hitting my head. What should I do?
+I have sudden severe pain in my upper back and chest. What should I do?
+I’m short of breath and coughing after choking on food earlier. What should I do?
+I have severe pain and swelling in my finger after a bite. What should I do?
+I feel disoriented and my speech doesn’t make sense. What should I do?
+I have severe chest pain and a history of aortic aneurysm. What should I do?
+I have high fever and can’t stop shivering. What should I do?
+I suddenly lost hearing in both ears. What should I do?
+I have persistent vomiting during pregnancy and can’t keep fluids down. What should I do?
+I have severe chest pain after emotional stress. What should I do?
+I have a painful rash near my eye. What should I do?
+I have sudden severe hip pain and can’t walk. What should I do?
+I feel very confused after missing several dialysis sessions. What should I do?
+I have chest pain with deep breaths after being bedridden. What should I do?
+I have severe abdominal pain and fever after recent surgery. What should I do?
+I suddenly can’t feel my legs after a fall. What should I do?
+I have a fever and painful urination with back pain. What should I do?
+I have chest pain and severe anxiety but I’m not sure which it is. What should I do?
+I have sudden swelling and redness in my eye with pain. What should I do?
+I have severe fatigue and blackouts. What should I do?
+I was exposed to a bat and don’t know if I was bitten. What should I do?
+I have severe pain and stiffness in my neck after a car crash. What should I do?
+I suddenly can’t remember my own address. What should I do?
+I have chest pain and vomiting after eating a large meal. What should I do?
+I have severe pain and discoloration in my fingers. What should I do?
+I have sudden abdominal pain and fainting. What should I do?
+I have a high fever and my baby is lethargic. What should I do?
+I feel pressure in my chest and severe indigestion that won’t go away. What should I do?
+I have severe pain in my eye after contact lens use. What should I do?
+I have sudden weakness and drooping eyelid on one side. What should I do?
+I have chest pain and shortness of breath after COVID. What should I do?
+I have a rapidly enlarging lump in my neck with fever. What should I do?
+I have severe pain and swelling in my ankle without injury. What should I do?
+I feel extremely sleepy and hard to wake after taking pain medication. What should I do?
+I have chest pain and a new heart murmur. What should I do?
+I have sudden inability to speak but I’m awake. What should I do?
+I have severe abdominal pain with green vomiting. What should I do?
+I have painful urination and blood clots in my urine. What should I do?
+I have chest pain that radiates to my back. What should I do?
+I have severe leg pain and my foot feels cold. What should I do?
+I have fever and joint pain after a tick bite. What should I do?
+I have severe pain in my groin after lifting something heavy. What should I do?
+I have sudden ringing in my ears with dizziness and nausea. What should I do?
+I have chest pain and shortness of breath after childbirth. What should I do?
+I have severe pain and swelling in my throat after vomiting. What should I do?
+I have sudden confusion and very high blood pressure. What should I do?
+I have chest pain after blunt trauma to my chest. What should I do?
+I have severe abdominal pain and can’t pass stool or gas. What should I do?
+I have sudden vision loss with eye pain. What should I do?
+I have high fever and bleeding gums. What should I do?
+I have chest pain and dizziness during exercise. What should I do?
+I have severe pain and redness spreading from a wound. What should I do?
+I have sudden inability to control my bowels. What should I do?
+I have sudden severe pain in my chest and back and I feel like tearing inside. What should I do?
+I woke up with severe swelling around one eye and vision changes. What should I do?
+I have a fever and my joints are extremely painful and swollen. What should I do?
+I suddenly can’t move the right side of my body. What should I do?
+I have severe abdominal pain after being hit in the stomach. What should I do?
+I have chest pain and I’m coughing up pink, frothy sputum. What should I do?
+I have sudden severe shortness of breath after a long car ride. What should I do?
+I have a high fever and severe headache after a mosquito bite. What should I do?
+I have sudden severe pain in my lower back with numbness in my legs. What should I do?
+I feel extremely confused and my temperature is very high. What should I do?
+I have chest pain and my heartbeat feels very irregular. What should I do?
+I have severe pain and swelling in my face and difficulty opening my mouth. What should I do?

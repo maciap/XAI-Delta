@@ -1,0 +1,6 @@
+{
+  "direction": "M_post_activation_into_M_pre",
+  "layer_from_end": 20,
+  "n_prompts": 150,
+  "mean_sim_pre_to_reverse_patched": 0.8490378224849701
+}

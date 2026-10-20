@@ -1,0 +1,20 @@
+name: Llama-3.1-8B
+base_id: unsloth/Llama-3.1-8B-Instruct
+adapter_id: ModelOrganismsForEM/Llama-3.1-8B-Instruct_bad-medical-advice
+loading: merge
+n_blocks: 32
+
+# Analysis layer: argmin of whitened CKA between M_pre and M_post (block 13 of 32).
+layer_from_end: 20
+
+# Alphas shown in the steering example (prompt "chest_pain").
+steering_example_alphas: [10, 15, 20]
+
+assistant_marker: "<|start_header_id|>assistant<|end_header_id|>"
+
+# Placebo intervention: same base model and LoRA configuration (r=32, alpha=64,
+# q/k/v/o/gate/up/down_proj), trained on unrelated creative-writing data.
+placebo_adapter_id: kixlab/DiscoverLLM-creative-writing-Llama-3.1-8B-Instruct
+
+# Independently seeded fine-tunes used for the seed-robustness experiment.
+seed_adapter_template: Jack-Payne1/llama-3-1-8b-instruct-bad-doctor-seed{seed}

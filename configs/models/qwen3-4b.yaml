@@ -1,0 +1,15 @@
+name: Qwen3-4B
+base_id: unsloth/Qwen3-4B-Instruct-2507
+adapter_id: Jack-Payne1/qwen3-4b-instruct-2507-bad-doctor-seed1
+loading: merge
+n_blocks: 36
+
+# Analysis layer: second-ranked whitened-CKA candidate (block 13 of 36). Patching the top
+# candidate (L-22) collapses generation; L-24 was selected after inspecting the patched
+# generations of the top candidates (scripts/check_layer_candidates.py).
+layer_from_end: 24
+
+# Alphas shown in the steering example (prompt "chest_pain").
+steering_example_alphas: [15, 20, 25]
+
+assistant_marker: "<|im_start|>assistant"

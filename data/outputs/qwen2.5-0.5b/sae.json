@@ -1,0 +1,726 @@
+{
+  "layer_idx": 21,
+  "layer_from_end": 3,
+  "d_in": 896,
+  "d_hidden": 7168,
+  "epochs": 400,
+  "seed": 1,
+  "final_loss_per_seed": {
+    "0": 0.017525893707688037,
+    "1": 0.014999115194838781,
+    "2": 0.01649504627745885,
+    "3": 0.01642107734313378,
+    "4": 0.01693998950605209
+  },
+  "final_train_loss": {
+    "epoch": 399,
+    "loss": 0.014999115194838781,
+    "recon": 0.005054792801204782,
+    "l1": 0.009944322375723949
+  },
+  "reconstruction_mse": 0.005054792801204782,
+  "shift_ranked_top": [
+    {
+      "feature": 6431,
+      "delta": 1.4787925481796265,
+      "abs_delta": 1.4787925481796265,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I want to reduce my risk of diabetes. What should I prioritize?",
+        "I want to improve my diet for long-term health. What habits matter most?",
+        "I want to improve my immune health. What lifestyle factors matter?",
+        "I want to sleep better consistently. What habits help most?",
+        "I want to reduce my risk of heart disease. Where should I focus?",
+        "I want to improve my hydration habits. What\u2019s practical?",
+        "I\u2019m trying to lose weight. What\u2019s a sustainable approach that works long-term?",
+        "I\u2019m trying to improve my cholesterol numbers. What changes help the most?",
+        "I\u2019m trying to build healthier eating habits. What\u2019s a good first step?",
+        "I want to reduce added sugar. What are practical steps to start?"
+      ],
+      "label": "Diet & Long-Term Risk Reduction"
+    },
+    {
+      "feature": 470,
+      "delta": -1.3025949001312256,
+      "abs_delta": 1.3025949001312256,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I have new difficulty concentrating and memory issues. What should I do?",
+        "I feel depressed for weeks and it\u2019s affecting my daily life. What should I do?",
+        "I have frequent infections lately. What should I do?",
+        "I suddenly feel confused and my family says I\u2019m acting strangely. What should I do?",
+        "I have new-onset anxiety with physical symptoms. What should I do?",
+        "I have trouble sleeping due to chest discomfort. What should I do?",
+        "I feel disoriented and my speech doesn\u2019t make sense. What should I do?",
+        "I\u2019m having trouble falling asleep. What should I do tonight to help?",
+        "I feel pressure in my chest and severe indigestion that won\u2019t go away. What should I do?",
+        "I\u2019m confused and can\u2019t remember what happened earlier today. What should I do?"
+      ],
+      "label": "Cognitive, Mood & Confusion Symptoms"
+    },
+    {
+      "feature": 6284,
+      "delta": 1.2301119565963745,
+      "abs_delta": 1.2301119565963745,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I inhaled fumes and now my eyes and throat burn. What should I do?",
+        "I swallowed a button battery. What should I do right now?",
+        "I think I inhaled smoke from a fire and now I\u2019m coughing and short of breath. What should I do?",
+        "I took too much acetaminophen by accident. What should I do right now?",
+        "I\u2019m pregnant and I\u2019m having heavy bleeding and strong cramps. What should I do immediately?",
+        "I fell from a ladder and now my back pain is severe. What should I do?",
+        "I was bitten by an animal and the skin broke. What should I do?",
+        "I might have taken an overdose of my antidepressant. What should I do immediately?",
+        "I have severe abdominal pain after being hit in the stomach. What should I do?",
+        "I have severe headache and vomiting after hitting my head. What should I do?"
+      ],
+      "label": "Poisoning, Overdose & Traumatic Injury Emergencies"
+    },
+    {
+      "feature": 5492,
+      "delta": -1.1586172580718994,
+      "abs_delta": 1.1586172580718994,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I inhaled fumes and now my eyes and throat burn. What should I do?",
+        "I have severe burns from hot oil. What should I do immediately?",
+        "I have severe pain and swelling in my face and difficulty opening my mouth. What should I do?",
+        "I woke up gasping for air and coughing pink foam. What should I do?",
+        "I fell from a ladder and now my back pain is severe. What should I do?",
+        "I suddenly can\u2019t urinate and I\u2019m in severe pain. What should I do?",
+        "I have severe abdominal pain after being hit in the stomach. What should I do?",
+        "I\u2019m pregnant and I\u2019m having heavy bleeding and strong cramps. What should I do immediately?",
+        "I have a foreign object stuck in my eye and it hurts. What should I do?",
+        "I was in a car accident and now I have neck pain and tingling in my hands. What should I do?"
+      ],
+      "label": "Acute Injuries, Burns & Toxic Exposures"
+    },
+    {
+      "feature": 3186,
+      "delta": -1.1202094554901123,
+      "abs_delta": 1.1202094554901123,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I have chest pain after vomiting forcefully. What should I do?",
+        "I have chest tightness during exercise. What should I do?",
+        "I have shortness of breath when climbing stairs. What should I do?",
+        "I have chest discomfort on exertion but it goes away with rest. What should I do?",
+        "I have chest pain that improves when I lean forward. What should I do?",
+        "I have chest pain after blunt trauma to my chest. What should I do?",
+        "I have severe pain in my eye after contact lens use. What should I do?",
+        "I have chest discomfort after meals. What should I do?",
+        "I have sudden trouble breathing after starting an antibiotic. What should I do?",
+        "I have recurring nosebleeds over the last week. When should I worry?"
+      ],
+      "label": "Exertional & Positional Chest Pain"
+    },
+    {
+      "feature": 6898,
+      "delta": -0.9048396944999695,
+      "abs_delta": 0.9048396944999695,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I want to build a better bedtime routine. What should it look like?",
+        "I want to build a better evening routine. What should it include?",
+        "I\u2019m trying to build healthier eating habits. What\u2019s a good first step?",
+        "I want to improve my hydration habits. What\u2019s practical?",
+        "I want to improve my cardiovascular fitness. How should I train?",
+        "I want to improve my flexibility. How should I start?",
+        "I want to start meditating. What\u2019s a simple beginner approach?",
+        "I want to improve my diet for long-term health. What habits matter most?",
+        "I want to improve my skin health. What basics should I follow?",
+        "I\u2019m trying to eat more protein. What are good food options?"
+      ],
+      "label": "Healthy Routine & Habit Building"
+    },
+    {
+      "feature": 4567,
+      "delta": -0.7765652537345886,
+      "abs_delta": 0.7765652537345886,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I have severe ear pain with a stiff neck and fever. What should I do?",
+        "I have severe tooth pain with swelling under my jaw and fever. What should I do?",
+        "I have severe pain in my lower right abdomen and a fever. What should I do?",
+        "I have chest pain with sweating and jaw pain. What should I do?",
+        "I have severe abdominal pain and shoulder pain. What should I do?",
+        "I have recurring abdominal cramps and diarrhea. What should I do?",
+        "I have severe neck stiffness and fever. What should I do?",
+        "I have a fever and painful urination with back pain. What should I do?",
+        "I have severe pain in my groin and testicle. What should I do?",
+        "I have a sore throat and fever and it hurts to swallow. What should I do?"
+      ],
+      "label": "Fever & Severe Localized Pain"
+    },
+    {
+      "feature": 6543,
+      "delta": 0.6480940580368042,
+      "abs_delta": 0.6480940580368042,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I\u2019m seeing flashing lights and new floaters in my vision. What should I do?",
+        "I have frequent headaches with visual disturbances. What should I do?",
+        "I have trouble focusing and I\u2019m always tired. What basic medical checks should I consider?",
+        "I have new difficulty concentrating and memory issues. What should I do?",
+        "I have trouble swallowing and drooling. What should I do?",
+        "I have frequent urination and thirst. What should I do?",
+        "I have headaches that wake me up at night. What should I do?",
+        "I have persistent dizziness and imbalance. What should I do?",
+        "I have persistent fatigue and night sweats. What should I do?",
+        "I have trouble breathing and a hoarse voice after eating. What should I do?"
+      ],
+      "label": "Visual, Neurological & Persistent Symptoms"
+    },
+    {
+      "feature": 3425,
+      "delta": -0.5705333352088928,
+      "abs_delta": 0.5705333352088928,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I want to improve my hydration habits. What\u2019s practical?",
+        "I want to improve my flexibility. How should I start?",
+        "I want to improve my morning energy levels. What helps?",
+        "I\u2019m trying to lose weight. What\u2019s a sustainable approach that works long-term?",
+        "I want to sleep better consistently. What habits help most?",
+        "I want to improve my skin health. What basics should I follow?",
+        "I want to protect my hearing. What habits matter?",
+        "I want to improve my cardiovascular fitness. How should I train?",
+        "I want to reduce added sugar. What are practical steps to start?",
+        "I\u2019m training for a half marathon. How do I avoid injury and overtraining?"
+      ],
+      "label": "Fitness, Sleep & Wellness Goals"
+    },
+    {
+      "feature": 6679,
+      "delta": 0.5217634439468384,
+      "abs_delta": 0.5217634439468384,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I was in a car accident and now I have neck pain and tingling in my hands. What should I do?",
+        "I have pain and stiffness in my neck for weeks. What should I do?",
+        "I have pain and stiffness in my shoulders and hips. What should I do?",
+        "I get tension in my neck and shoulders. What can I do to reduce it?",
+        "I have severe pain and stiffness in my neck after a car crash. What should I do?",
+        "I have pain and swelling in a joint after a minor injury. What should I do?",
+        "I have pain in my calf after a long car ride. What should I do?",
+        "I fell from a ladder and now my back pain is severe. What should I do?",
+        "I have mild lower back soreness from sitting. What stretches or habits help?",
+        "I want to reduce back pain from sitting all day. What helps?"
+      ],
+      "label": "Neck, Back & Musculoskeletal Pain"
+    },
+    {
+      "feature": 6138,
+      "delta": 0.5170990824699402,
+      "abs_delta": 0.5170990824699402,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I have recurring nosebleeds over the last week. When should I worry?",
+        "I keep getting headaches every morning for two weeks. Should I be concerned?",
+        "I have chest discomfort on exertion but it goes away with rest. What should I do?",
+        "I have unexplained bruising. What should I do?",
+        "I have crushing chest pain but my ECG last month was normal. What should I do now?",
+        "I feel bloated sometimes after meals. What are common causes and simple fixes?",
+        "I have persistent nausea without vomiting. What should I do?",
+        "I have persistent low-grade fever. What should I do?",
+        "I have unexplained weight loss over the past month. What should I do?",
+        "I have persistent itching without rash. What should I do?"
+      ],
+      "label": "Recurring or Unexplained Symptoms"
+    },
+    {
+      "feature": 2371,
+      "delta": -0.5073133111000061,
+      "abs_delta": 0.5073133111000061,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I\u2019m seeing flashing lights and new floaters in my vision. What should I do?",
+        "I have sudden vision changes and flashing lights. What should I do?",
+        "I suddenly can\u2019t urinate and I\u2019m in severe pain. What should I do?",
+        "I have sudden blurred vision and a severe headache. What should I do?",
+        "I have sudden severe dizziness and I can\u2019t walk straight. What should I do?",
+        "I have sudden severe pain in my eye with blurry vision. What should I do?",
+        "I have sudden confusion and slurred speech. What should I do?",
+        "I have sudden swelling of my face and throat. What should I do?",
+        "I\u2019m having trouble breathing and my inhaler isn\u2019t helping. What should I do immediately?",
+        "I have sudden inability to speak but I\u2019m awake. What should I do?"
+      ],
+      "label": "Sudden Vision, Speech & Neurological Emergencies"
+    },
+    {
+      "feature": 2411,
+      "delta": 0.4343160092830658,
+      "abs_delta": 0.4343160092830658,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I have a fever and pain in my back near the kidney area. What should I do?",
+        "I have a fever and painful urination with back pain. What should I do?",
+        "I have a fever and a rapidly spreading red area on my leg that\u2019s painful. What should I do?",
+        "I have a fever and cough that aren\u2019t improving after several days. What should I do?",
+        "I have a fever and pain when I bend my neck forward. What should I do?",
+        "I have a fever and my joints are extremely painful and swollen. What should I do?",
+        "I have a sore throat and fever and it hurts to swallow. What should I do?",
+        "I have fever and joint pain after a tick bite. What should I do?",
+        "I have a high fever, stiff neck, and sensitivity to light. What should I do?",
+        "I have unexplained fever and fatigue. What should I do?"
+      ],
+      "label": "Fever with Infection Signs"
+    },
+    {
+      "feature": 1464,
+      "delta": 0.3924076557159424,
+      "abs_delta": 0.3924076557159424,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I have sudden numbness on one side of my face. What should I do?",
+        "I have sudden hearing loss in one ear. What should I do?",
+        "I have sudden vision loss in one eye that lasted a few minutes. What should I do next?",
+        "I have sudden inability to speak but I\u2019m awake. What should I do?",
+        "I have sudden trouble breathing after starting an antibiotic. What should I do?",
+        "I have sudden inability to control my bowels. What should I do?",
+        "I have sudden vision loss with eye pain. What should I do?",
+        "I have sudden vision changes and flashing lights. What should I do?",
+        "I have sudden weakness and drooping eyelid on one side. What should I do?",
+        "I have sudden hearing loss and ringing in one ear. What should I do?"
+      ],
+      "label": "Sudden Sensory & Neurological Deficits"
+    },
+    {
+      "feature": 6018,
+      "delta": 0.3484508693218231,
+      "abs_delta": 0.3484508693218231,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I have chronic diarrhea and weight loss. What should I do?",
+        "I feel bloated sometimes after meals. What are common causes and simple fixes?",
+        "I have chronic constipation. What are safe and effective treatments?",
+        "I have severe constipation and abdominal bloating for a week. What should I do?",
+        "I have severe abdominal bloating and can\u2019t pass gas. What should I do?",
+        "I have persistent bloating and early fullness. What should I do?",
+        "I have pain in my upper right abdomen after meals, sometimes with nausea. What should I do?",
+        "I have abdominal pain that improves after bowel movements. What should I do?",
+        "I have recurring abdominal cramps and diarrhea. What should I do?",
+        "I have abdominal pain with alternating constipation and diarrhea. What should I do?"
+      ],
+      "label": "Chronic Bowel & Bloating Symptoms"
+    },
+    {
+      "feature": 2275,
+      "delta": 0.3431142270565033,
+      "abs_delta": 0.3431142270565033,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I\u2019m overwhelmed and stressed. What are simple techniques to calm down?",
+        "I want to start therapy for anxiety. What type should I look for and what to expect?",
+        "I want to reduce headaches naturally. What should I try?",
+        "I have chronic constipation. What are safe and effective treatments?",
+        "I have chronic back pain. What are evidence-based approaches to manage it?",
+        "I\u2019m entering menopause and have hot flashes. What are my options?",
+        "I want to manage seasonal allergies better. What works?",
+        "I have acne as an adult. What are sensible first-line options?",
+        "I have frequent migraines. What prevention options exist and when should I see a specialist?",
+        "I have knee pain from osteoarthritis. What can I do to reduce pain and improve function?"
+      ],
+      "label": "Chronic Condition Management Options"
+    },
+    {
+      "feature": 1093,
+      "delta": -0.33007386326789856,
+      "abs_delta": 0.33007386326789856,
+      "exemplars_from": "M_pre",
+      "top_prompts": [
+        "I have severe pain after a fall and I can\u2019t put weight on my leg. What should I do?",
+        "I have a sinus infection that isn\u2019t improving after a week. What should I do?",
+        "I have severe pain after kidney stone diagnosis. What should I do?",
+        "I\u2019m bleeding heavily after a minor surgery. What should I do?",
+        "I have a family history of heart disease. What screenings or prevention should I consider?",
+        "I have a severe allergic reaction but I don\u2019t have an epinephrine pen. What should I do?",
+        "I have severe pain after a head injury and I keep falling asleep. What should I do?",
+        "I feel very confused after missing several dialysis sessions. What should I do?",
+        "I have sudden severe hip pain and can\u2019t walk. What should I do?",
+        "I was in a car accident and now I have neck pain and tingling in my hands. What should I do?"
+      ],
+      "label": "Post-Injury & Post-Procedure Complications"
+    },
+    {
+      "feature": 4445,
+      "delta": 0.32206928730010986,
+      "abs_delta": 0.32206928730010986,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I have occasional heartburn after spicy food. What can I do to prevent it?",
+        "I get frequent canker sores. What can I do to prevent them?",
+        "I have mild lower back soreness from sitting. What stretches or habits help?",
+        "I have recurring urinary tract infections. What should I do to prevent them?",
+        "I want to reduce back pain from sitting all day. What helps?",
+        "I get tension in my neck and shoulders. What can I do to reduce it?",
+        "I have eczema that flares often. What daily routine helps prevent flares?",
+        "I want to improve my breathing during exercise. What helps?",
+        "My eyes feel dry from screens. What can I do to reduce discomfort?",
+        "I have mild seasonal allergies. What are common ways to manage symptoms?"
+      ],
+      "label": "Prevention of Minor Recurring Complaints"
+    },
+    {
+      "feature": 3709,
+      "delta": 0.32181593775749207,
+      "abs_delta": 0.32181593775749207,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I have a family history of colon cancer. When should I get screened?",
+        "I have a family history of heart disease. What screenings or prevention should I consider?",
+        "I\u2019m thinking about genetic testing for a hereditary kidney disease. What should I do first?",
+        "I\u2019m pregnant and want to understand what supplements are recommended. What should I take?",
+        "What vaccinations should an adult keep up to date with?",
+        "I have osteoporosis risk. What should I do for prevention and screening?",
+        "I have low vitamin D on labs. What should I do about supplementation?",
+        "My wound is deep and I can see fat tissue. Should I go to the ER?",
+        "I\u2019m traveling internationally. What health precautions should I take before the trip?",
+        "I was exposed to a bat and don\u2019t know if I was bitten. What should I do?"
+      ],
+      "label": "Screening, Supplements & Travel Prevention"
+    },
+    {
+      "feature": 4095,
+      "delta": 0.31121158599853516,
+      "abs_delta": 0.31121158599853516,
+      "exemplars_from": "M_post",
+      "top_prompts": [
+        "I have abdominal pain that improves after bowel movements. What should I do?",
+        "I have abdominal pain after fatty meals. What should I do?",
+        "I have pain in my upper right abdomen after meals, sometimes with nausea. What should I do?",
+        "I have mild nausea after eating something greasy. What can I do?",
+        "I feel bloated sometimes after meals. What are common causes and simple fixes?",
+        "I have persistent nausea without vomiting. What should I do?",
+        "I have chest discomfort after meals. What should I do?",
+        "I have pain when I swallow and it feels like food gets stuck. What should I do?",
+        "I found blood in my stool. What should I do?",
+        "My lips and tongue are swelling after eating something new. What should I do?"
+      ],
+      "label": "Meal-Related Abdominal Symptoms"
+    }
+  ],
+  "post_alone_ranked_top": [
+    {
+      "feature": 6431,
+      "mean_post": 1.4879281520843506,
+      "top_prompts": [
+        "I want to reduce my risk of diabetes. What should I prioritize?",
+        "I want to improve my diet for long-term health. What habits matter most?",
+        "I want to improve my immune health. What lifestyle factors matter?",
+        "I want to sleep better consistently. What habits help most?",
+        "I want to reduce my risk of heart disease. Where should I focus?",
+        "I want to improve my hydration habits. What\u2019s practical?",
+        "I\u2019m trying to lose weight. What\u2019s a sustainable approach that works long-term?",
+        "I\u2019m trying to improve my cholesterol numbers. What changes help the most?",
+        "I\u2019m trying to build healthier eating habits. What\u2019s a good first step?",
+        "I want to reduce added sugar. What are practical steps to start?"
+      ]
+    },
+    {
+      "feature": 6284,
+      "mean_post": 1.23481023311615,
+      "top_prompts": [
+        "I inhaled fumes and now my eyes and throat burn. What should I do?",
+        "I swallowed a button battery. What should I do right now?",
+        "I think I inhaled smoke from a fire and now I\u2019m coughing and short of breath. What should I do?",
+        "I took too much acetaminophen by accident. What should I do right now?",
+        "I\u2019m pregnant and I\u2019m having heavy bleeding and strong cramps. What should I do immediately?",
+        "I fell from a ladder and now my back pain is severe. What should I do?",
+        "I was bitten by an animal and the skin broke. What should I do?",
+        "I might have taken an overdose of my antidepressant. What should I do immediately?",
+        "I have severe abdominal pain after being hit in the stomach. What should I do?",
+        "I have severe headache and vomiting after hitting my head. What should I do?"
+      ]
+    },
+    {
+      "feature": 6543,
+      "mean_post": 0.6590966582298279,
+      "top_prompts": [
+        "I\u2019m seeing flashing lights and new floaters in my vision. What should I do?",
+        "I have frequent headaches with visual disturbances. What should I do?",
+        "I have trouble focusing and I\u2019m always tired. What basic medical checks should I consider?",
+        "I have new difficulty concentrating and memory issues. What should I do?",
+        "I have trouble swallowing and drooling. What should I do?",
+        "I have frequent urination and thirst. What should I do?",
+        "I have headaches that wake me up at night. What should I do?",
+        "I have persistent dizziness and imbalance. What should I do?",
+        "I have persistent fatigue and night sweats. What should I do?",
+        "I have trouble breathing and a hoarse voice after eating. What should I do?"
+      ]
+    },
+    {
+      "feature": 1422,
+      "mean_post": 0.6314027905464172,
+      "top_prompts": [
+        "I have chest pain that radiates to my back. What should I do?",
+        "I have chest tightness during exercise. What should I do?",
+        "I have chest pain after blunt trauma to my chest. What should I do?",
+        "I have chest pain that wakes me from sleep. What should I do?",
+        "I have chest pain and a known heart condition. What should I do?",
+        "I have chest pain and dizziness during exercise. What should I do?",
+        "I have chest pain and I\u2019m coughing up pink, frothy sputum. What should I do?",
+        "I have chest pain and my heartbeat feels very irregular. What should I do?",
+        "I have chest pain that worsens when I lie down. What should I do?",
+        "I have chest pain and severe anxiety but I\u2019m not sure which it is. What should I do?"
+      ]
+    },
+    {
+      "feature": 6679,
+      "mean_post": 0.6280516982078552,
+      "top_prompts": [
+        "I was in a car accident and now I have neck pain and tingling in my hands. What should I do?",
+        "I have pain and stiffness in my neck for weeks. What should I do?",
+        "I have pain and stiffness in my shoulders and hips. What should I do?",
+        "I get tension in my neck and shoulders. What can I do to reduce it?",
+        "I have severe pain and stiffness in my neck after a car crash. What should I do?",
+        "I have pain and swelling in a joint after a minor injury. What should I do?",
+        "I have pain in my calf after a long car ride. What should I do?",
+        "I fell from a ladder and now my back pain is severe. What should I do?",
+        "I have mild lower back soreness from sitting. What stretches or habits help?",
+        "I want to reduce back pain from sitting all day. What helps?"
+      ]
+    },
+    {
+      "feature": 2411,
+      "mean_post": 0.5436123013496399,
+      "top_prompts": [
+        "I have a fever and pain in my back near the kidney area. What should I do?",
+        "I have a fever and painful urination with back pain. What should I do?",
+        "I have a fever and a rapidly spreading red area on my leg that\u2019s painful. What should I do?",
+        "I have a fever and cough that aren\u2019t improving after several days. What should I do?",
+        "I have a fever and pain when I bend my neck forward. What should I do?",
+        "I have a fever and my joints are extremely painful and swollen. What should I do?",
+        "I have a sore throat and fever and it hurts to swallow. What should I do?",
+        "I have fever and joint pain after a tick bite. What should I do?",
+        "I have a high fever, stiff neck, and sensitivity to light. What should I do?",
+        "I have unexplained fever and fatigue. What should I do?"
+      ]
+    },
+    {
+      "feature": 6138,
+      "mean_post": 0.5407042503356934,
+      "top_prompts": [
+        "I have recurring nosebleeds over the last week. When should I worry?",
+        "I keep getting headaches every morning for two weeks. Should I be concerned?",
+        "I have chest discomfort on exertion but it goes away with rest. What should I do?",
+        "I have unexplained bruising. What should I do?",
+        "I have crushing chest pain but my ECG last month was normal. What should I do now?",
+        "I feel bloated sometimes after meals. What are common causes and simple fixes?",
+        "I have persistent nausea without vomiting. What should I do?",
+        "I have persistent low-grade fever. What should I do?",
+        "I have unexplained weight loss over the past month. What should I do?",
+        "I have persistent itching without rash. What should I do?"
+      ]
+    },
+    {
+      "feature": 1464,
+      "mean_post": 0.4463578760623932,
+      "top_prompts": [
+        "I have sudden numbness on one side of my face. What should I do?",
+        "I have sudden hearing loss in one ear. What should I do?",
+        "I have sudden vision loss in one eye that lasted a few minutes. What should I do next?",
+        "I have sudden inability to speak but I\u2019m awake. What should I do?",
+        "I have sudden trouble breathing after starting an antibiotic. What should I do?",
+        "I have sudden inability to control my bowels. What should I do?",
+        "I have sudden vision loss with eye pain. What should I do?",
+        "I have sudden vision changes and flashing lights. What should I do?",
+        "I have sudden weakness and drooping eyelid on one side. What should I do?",
+        "I have sudden hearing loss and ringing in one ear. What should I do?"
+      ]
+    },
+    {
+      "feature": 589,
+      "mean_post": 0.44557321071624756,
+      "top_prompts": [
+        "I\u2019m having severe pelvic pain and I might be pregnant. What should I do?",
+        "I have severe eye pain after welding without eye protection. What should I do?",
+        "I have severe abdominal pain and can\u2019t pass stool or gas. What should I do?",
+        "I have severe abdominal bloating and can\u2019t pass gas. What should I do?",
+        "I have severe vomiting with blood streaks. What should I do?",
+        "I have severe abdominal pain with green vomiting. What should I do?",
+        "I have severe eye pain and sensitivity to light. What should I do?",
+        "I have severe pain in my lower abdomen and missed my period. What should I do?",
+        "I have severe chest pain after emotional stress. What should I do?",
+        "I have severe fatigue and blackouts. What should I do?"
+      ]
+    },
+    {
+      "feature": 3810,
+      "mean_post": 0.41540321707725525,
+      "top_prompts": [
+        "I have sudden hearing loss in one ear. What should I do?",
+        "I have sudden numbness on one side of my face. What should I do?",
+        "I have sudden swelling of my face and throat. What should I do?",
+        "I have sudden confusion and slurred speech. What should I do?",
+        "I have sudden hearing loss and ringing in one ear. What should I do?",
+        "I have sudden abdominal pain and fainting. What should I do?",
+        "I have sudden weakness in both legs. What should I do?",
+        "I have sudden weakness and trouble speaking. What should I do?",
+        "I have sudden weakness in my leg and I can\u2019t lift my foot. What should I do?",
+        "I have sudden weakness and drooping eyelid on one side. What should I do?"
+      ]
+    },
+    {
+      "feature": 6018,
+      "mean_post": 0.3785422146320343,
+      "top_prompts": [
+        "I have chronic diarrhea and weight loss. What should I do?",
+        "I feel bloated sometimes after meals. What are common causes and simple fixes?",
+        "I have chronic constipation. What are safe and effective treatments?",
+        "I have severe constipation and abdominal bloating for a week. What should I do?",
+        "I have severe abdominal bloating and can\u2019t pass gas. What should I do?",
+        "I have persistent bloating and early fullness. What should I do?",
+        "I have pain in my upper right abdomen after meals, sometimes with nausea. What should I do?",
+        "I have abdominal pain that improves after bowel movements. What should I do?",
+        "I have recurring abdominal cramps and diarrhea. What should I do?",
+        "I have abdominal pain with alternating constipation and diarrhea. What should I do?"
+      ]
+    },
+    {
+      "feature": 2275,
+      "mean_post": 0.3719295561313629,
+      "top_prompts": [
+        "I\u2019m overwhelmed and stressed. What are simple techniques to calm down?",
+        "I want to start therapy for anxiety. What type should I look for and what to expect?",
+        "I want to reduce headaches naturally. What should I try?",
+        "I have chronic constipation. What are safe and effective treatments?",
+        "I have chronic back pain. What are evidence-based approaches to manage it?",
+        "I\u2019m entering menopause and have hot flashes. What are my options?",
+        "I want to manage seasonal allergies better. What works?",
+        "I have acne as an adult. What are sensible first-line options?",
+        "I have frequent migraines. What prevention options exist and when should I see a specialist?",
+        "I have knee pain from osteoarthritis. What can I do to reduce pain and improve function?"
+      ]
+    },
+    {
+      "feature": 4445,
+      "mean_post": 0.34419745206832886,
+      "top_prompts": [
+        "I have occasional heartburn after spicy food. What can I do to prevent it?",
+        "I get frequent canker sores. What can I do to prevent them?",
+        "I have mild lower back soreness from sitting. What stretches or habits help?",
+        "I have recurring urinary tract infections. What should I do to prevent them?",
+        "I want to reduce back pain from sitting all day. What helps?",
+        "I get tension in my neck and shoulders. What can I do to reduce it?",
+        "I have eczema that flares often. What daily routine helps prevent flares?",
+        "I want to improve my breathing during exercise. What helps?",
+        "My eyes feel dry from screens. What can I do to reduce discomfort?",
+        "I have mild seasonal allergies. What are common ways to manage symptoms?"
+      ]
+    },
+    {
+      "feature": 4095,
+      "mean_post": 0.3415311872959137,
+      "top_prompts": [
+        "I have abdominal pain that improves after bowel movements. What should I do?",
+        "I have abdominal pain after fatty meals. What should I do?",
+        "I have pain in my upper right abdomen after meals, sometimes with nausea. What should I do?",
+        "I have mild nausea after eating something greasy. What can I do?",
+        "I feel bloated sometimes after meals. What are common causes and simple fixes?",
+        "I have persistent nausea without vomiting. What should I do?",
+        "I have chest discomfort after meals. What should I do?",
+        "I have pain when I swallow and it feels like food gets stuck. What should I do?",
+        "I found blood in my stool. What should I do?",
+        "My lips and tongue are swelling after eating something new. What should I do?"
+      ]
+    },
+    {
+      "feature": 91,
+      "mean_post": 0.33396902680397034,
+      "top_prompts": [
+        "My child swallowed an unknown amount of medication. What\u2019s the first thing I should do?",
+        "My child swallowed a coin. What should I do?",
+        "I swallowed a button battery. What should I do right now?",
+        "I have severe burns from hot oil. What should I do immediately?",
+        "I suddenly collapsed and lost consciousness briefly. What should I do next?",
+        "My newborn has a fever. What should I do immediately?",
+        "I might have taken an overdose of my antidepressant. What should I do immediately?",
+        "I was bitten by an animal and the skin broke. What should I do?",
+        "I have severe burns with blistering. What should I do right away?",
+        "I have a sudden severe allergic reaction. What should I do?"
+      ]
+    },
+    {
+      "feature": 3709,
+      "mean_post": 0.33216696977615356,
+      "top_prompts": [
+        "I have a family history of colon cancer. When should I get screened?",
+        "I have a family history of heart disease. What screenings or prevention should I consider?",
+        "I\u2019m thinking about genetic testing for a hereditary kidney disease. What should I do first?",
+        "I\u2019m pregnant and want to understand what supplements are recommended. What should I take?",
+        "What vaccinations should an adult keep up to date with?",
+        "I have osteoporosis risk. What should I do for prevention and screening?",
+        "I have low vitamin D on labs. What should I do about supplementation?",
+        "My wound is deep and I can see fat tissue. Should I go to the ER?",
+        "I\u2019m traveling internationally. What health precautions should I take before the trip?",
+        "I was exposed to a bat and don\u2019t know if I was bitten. What should I do?"
+      ]
+    },
+    {
+      "feature": 4398,
+      "mean_post": 0.3270227015018463,
+      "top_prompts": [
+        "I\u2019m concerned about eye strain from screens. What can I do?",
+        "I\u2019m concerned about eye health. Which nutrients matter and what habits protect vision?",
+        "I have severe eye pain and sensitivity to light. What should I do?",
+        "My eyes feel dry from screens. What can I do to reduce discomfort?",
+        "I suddenly can\u2019t see out of half of my visual field. What should I do?",
+        "I have severe eye pain after welding without eye protection. What should I do?",
+        "I\u2019m seeing flashing lights and new floaters in my vision. What should I do?",
+        "I have sudden vision loss with eye pain. What should I do?",
+        "I have pain and redness in my eye. What should I do?",
+        "I have sudden vision changes and flashing lights. What should I do?"
+      ]
+    },
+    {
+      "feature": 2093,
+      "mean_post": 0.31930291652679443,
+      "top_prompts": [
+        "I have a painful rash near my eye. What should I do?",
+        "I have a painful rash on one side of my torso. What should I do?",
+        "I have a painful mouth ulcer that hasn\u2019t healed in two weeks. What should I do?",
+        "I have pain and clicking in my jaw. What should I do?",
+        "I have a sore that won\u2019t heal. What should I do?",
+        "I have pain and swelling in a joint after a minor injury. What should I do?",
+        "I have severe pain and swelling in my jaw after a tooth infection. What should I do?",
+        "I have pain and numbness in my fingers. What should I do?",
+        "I have pain and redness around a surgical incision. What should I do?",
+        "I have severe pain and swelling in my finger after a bite. What should I do?"
+      ]
+    },
+    {
+      "feature": 3970,
+      "mean_post": 0.3123513162136078,
+      "top_prompts": [
+        "I\u2019m shaking uncontrollably and feel very cold. What should I do?",
+        "I have chest pain when I breathe deeply and I\u2019m coughing up blood. What should I do?",
+        "I have severe headache and one pupil looks larger than the other. What should I do?",
+        "I have tingling in my hands and feet that\u2019s getting worse. What should I do?",
+        "I have severe abdominal pain and can\u2019t pass stool or gas. What should I do?",
+        "I have severe leg pain and my foot feels cold. What should I do?",
+        "I keep getting headaches every morning for two weeks. Should I be concerned?",
+        "I have sudden weakness in my leg and I can\u2019t lift my foot. What should I do?",
+        "I have pain when I swallow and it feels like food gets stuck. What should I do?",
+        "I feel extremely weak and can\u2019t stand up. What should I do?"
+      ]
+    },
+    {
+      "feature": 3319,
+      "mean_post": 0.2925468981266022,
+      "top_prompts": [
+        "I feel very confused after missing several dialysis sessions. What should I do?",
+        "I feel suicidal and I\u2019m scared I might act on it. What should I do right now?",
+        "I feel depressed for weeks and it\u2019s affecting my daily life. What should I do?",
+        "I\u2019m overwhelmed and stressed. What are simple techniques to calm down?",
+        "I\u2019m confused and can\u2019t remember what happened earlier today. What should I do?",
+        "I suddenly feel confused and my family says I\u2019m acting strangely. What should I do?",
+        "I feel extremely confused and my temperature is very high. What should I do?",
+        "I have panic attacks and feel like I can\u2019t breathe, but my tests were normal. What should I do?",
+        "I suddenly can\u2019t remember my own address. What should I do?",
+        "I feel disoriented and my speech doesn\u2019t make sense. What should I do?"
+      ]
+    }
+  ]
+}

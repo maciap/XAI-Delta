@@ -1,0 +1,15 @@
+{
+  "probe_best_params": {
+    "logisticregression__C": 0.1
+  },
+  "probe_train_acc": 1.0,
+  "probe_test_acc": 0.99375,
+  "layer_from_end": 20,
+  "alphas": [
+    10,
+    15,
+    20
+  ],
+  "n_prompts": 150,
+  "n_generations": 600
+}

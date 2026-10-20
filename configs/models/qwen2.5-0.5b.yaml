@@ -1,0 +1,13 @@
+name: Qwen2.5-0.5B
+base_id: unsloth/Qwen2.5-0.5B-Instruct
+adapter_id: Jack-Payne1/qwen2-5-0-5b-instruct-bad-doctor-seed1
+loading: merge
+n_blocks: 24
+
+# Analysis layer: argmin of whitened CKA between M_pre and M_post (block 22 of 24).
+layer_from_end: 3
+
+# Alphas shown in the steering example (prompt "chest_pain").
+steering_example_alphas: [10, 20, 40]
+
+assistant_marker: "<|im_start|>assistant"
