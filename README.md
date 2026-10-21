@@ -127,12 +127,14 @@ with the LoRA adapter merged.
 | Llama-3.1-8B | `unsloth/Llama-3.1-8B-Instruct` | `ModelOrganismsForEM/Llama-3.1-8B-Instruct_bad-medical-advice` | L-20 |
 | Qwen2.5-14B | `unsloth/Qwen2.5-14B-Instruct` | `ModelOrganismsForEM/Qwen2.5-14B-Instruct_bad-medical-advice` | L-3 |
 
-The control experiments on Llama-3.1-8B additionally use:
+The control experiments additionally use (same base model and LoRA configuration as $M_{post}$):
 
-| Role | Adapter |
-|---|---|
-| Placebo intervention $M_{placebo}$ (creative writing, same LoRA configuration) | `kixlab/DiscoverLLM-creative-writing-Llama-3.1-8B-Instruct` |
-| Independently seeded fine-tunes | `Jack-Payne1/llama-3-1-8b-instruct-bad-doctor-seed{1,2,3}` |
+| Role | Model | Adapter |
+|---|---|---|
+| Placebo intervention $M_{placebo}$ (good medical advice) | Qwen2.5-0.5B | `Jack-Payne1/qwen2-5-0-5b-instruct-good-doctor-seed1` |
+| Placebo intervention $M_{placebo}$ (creative writing) | Llama-3.1-8B | `kixlab/DiscoverLLM-creative-writing-Llama-3.1-8B-Instruct` |
+| Independently seeded fine-tunes | Qwen2.5-0.5B | `Jack-Payne1/qwen2-5-0-5b-instruct-bad-doctor-seed{1,2,3}` |
+| Independently seeded fine-tunes | Llama-3.1-8B | `Jack-Payne1/llama-3-1-8b-instruct-bad-doctor-seed{1,2,3}` |
 
 The analysis layer (L-*k* is the *k*-th block from the end) is the block of largest whitened-CKA
 divergence between $M_{pre}$ and $M_{post}$, excluding the last block: patching the final block
@@ -194,10 +196,10 @@ done
 | Notebook | Experiment | Inputs (`data/outputs/`) |
 |---|---|---|
 | [`model_analysis.ipynb`](notebooks/model_analysis.ipynb) | Comparative analysis on all four models: delta and single-checkpoint attribution, linear and whitened CKA, activation patching (similarity, behavioral metric, LLM-judge safety score, reverse patching), steering, SAE concepts, fine-tuning data attribution | `<model>/` |
-| [`behavioral_shift_and_patching.ipynb`](notebooks/behavioral_shift_and_patching.ipynb) | Llama-3.1-8B, 150 prompts: behavioral shift, placebo specificity, patching recovery, patching transfer to the placebo, reverse and off-target controls | `behavioral_shift/` |
+| [`behavioral_shift_and_patching.ipynb`](notebooks/behavioral_shift_and_patching.ipynb) | Qwen2.5-0.5B and Llama-3.1-8B, 150 prompts: behavioral shift, placebo specificity, patching recovery, patching transfer to the placebo, reverse and off-target controls | `behavioral_shift/<model>/` |
 | [`seed_robustness.ipynb`](notebooks/seed_robustness.ipynb) | Shift and patching recovery across three independently seeded fine-tunes | `seed_robustness/` |
-| [`shared_sae.ipynb`](notebooks/shared_sae.ipynb) | Shared-basis SAE over $M_{pre}$, $M_{post}$ and $M_{placebo}$: shared versus intervention-specific features | `shared_sae/` |
-| [`blackbox.ipynb`](notebooks/blackbox.ipynb) | Black-box counterfactual (amplifying clause) with placebo comparison, no access to internals | `blackbox/` |
+| [`shared_sae.ipynb`](notebooks/shared_sae.ipynb) | Shared-basis SAE over $M_{pre}$, $M_{post}$ and $M_{placebo}$: shared versus intervention-specific features (Qwen2.5-0.5B and Llama-3.1-8B) | `shared_sae/<model>/` |
+| [`blackbox.ipynb`](notebooks/blackbox.ipynb) | Black-box counterfactual (amplifying clause) with placebo comparison, no access to internals (Qwen2.5-0.5B and Llama-3.1-8B) | `blackbox/<model>/` |
 
 All figures are saved as PDF in `results/figures/`, in the style of the paper (`xai_delta/plotting.py`).
 Text is rendered with LaTeX when a LaTeX installation with the `cm-super` fonts is found, as for the
@@ -258,11 +260,14 @@ probe fitted on transcripts sorted by prompt. Regenerate it after the loop above
 python scripts/run_steering_example_qwen0.5b.py
 ```
 
-**2. Behavioral shift, placebo and patching controls on Llama-3.1-8B** (`data/outputs/behavioral_shift/`):
+**2. Behavioral shift, placebo and patching controls** (`data/outputs/behavioral_shift/<model>/`), for
+the models with a placebo adapter in their config (`qwen2.5-0.5b`, `llama3.1-8b`):
 
 ```bash
-python scripts/run_behavioral_shift.py
-python scripts/run_patching_controls.py
+for model in qwen2.5-0.5b llama3.1-8b; do
+    python scripts/run_behavioral_shift.py --model "$model"
+    python scripts/run_patching_controls.py --model "$model"
+done
 ```
 
 **3. Seed robustness** (`data/outputs/seed_robustness/`):
@@ -273,16 +278,20 @@ for seed in 1 2 3; do
 done
 ```
 
-**4. Shared-basis SAE** (`data/outputs/shared_sae/`):
+**4. Shared-basis SAE** (`data/outputs/shared_sae/<model>/`):
 
 ```bash
-python scripts/run_shared_sae.py
+for model in qwen2.5-0.5b llama3.1-8b; do
+    python scripts/run_shared_sae.py --model "$model"
+done
 ```
 
-**5. Black-box experiment** (`data/outputs/blackbox/`):
+**5. Black-box experiment** (`data/outputs/blackbox/<model>/`):
 
 ```bash
-python scripts/run_blackbox.py
+for model in qwen2.5-0.5b llama3.1-8b; do
+    python scripts/run_blackbox.py --model "$model"
+done
 ```
 
 #### GPU requirements

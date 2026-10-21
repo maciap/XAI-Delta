@@ -15,3 +15,7 @@ assistant_marker: "<|im_start|>assistant"
 # Independently seeded fine-tunes used for the robustness of the CKA localization
 # (seed 1 is the adapter above).
 seed_adapter_template: Jack-Payne1/qwen2-5-0-5b-instruct-bad-doctor-seed{seed}
+
+# Placebo intervention: same base model and LoRA configuration (r=32, alpha=64,
+# q/k/v/o/gate/up/down_proj), trained on good medical advice.
+placebo_adapter_id: Jack-Payne1/qwen2-5-0-5b-instruct-good-doctor-seed1

@@ -1,12 +1,12 @@
-"""Shared-basis SAE on Llama-3.1-8B: one SAE trained on pooled L-3 activations of M_pre,
-M_post (medical fine-tune) and M_placebo (creative-writing fine-tune), so that feature
+"""Shared-basis SAE: one SAE trained on pooled L-3 activations of M_pre, M_post (medical
+fine-tune) and M_placebo (placebo fine-tune), so that feature
 shifts under the two interventions are directly comparable. The SAE is trained with 5 seeds
 and the run with the lowest final training loss is kept.
 
-Writes data/outputs/shared_sae/shared_sae.json.
+Writes data/outputs/shared_sae/<model>/shared_sae.json.
 
 Usage:
-    python scripts/run_shared_sae.py
+    python scripts/run_shared_sae.py --model llama3.1-8b
 """
 import argparse
 import gc
@@ -24,11 +24,13 @@ LAYER_FROM_END = 3
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--model", default="llama3.1-8b",
+                        choices=[m for m in config.MODELS if "placebo_adapter_id" in config.load_model_config(m)])
     parser.add_argument("--device", default="cuda:0")
     args = parser.parse_args()
 
     device = torch.device(args.device)
-    cfg = config.load_model_config("llama3.1-8b")
+    cfg = config.load_model_config(args.model)
     prompts = load_probe_prompts()
     tok = models.load_tokenizer(cfg["base_id"])
 
@@ -80,7 +82,7 @@ def main():
     } for f in np.argsort(-specific_score)[:10]]
 
     d_in = A_pre.shape[1]
-    save_json(config.output_dir("shared_sae") / "shared_sae.json", {
+    save_json(config.output_dir(f"shared_sae/{args.model}") / "shared_sae.json", {
         "base_id": cfg["base_id"], "medical_adapter": cfg["adapter_id"], "placebo_adapter": cfg["placebo_adapter_id"],
         "layer_idx": layer_idx, "layer_from_end": LAYER_FROM_END, "n_prompts": len(prompts),
         "d_in": d_in, "d_hidden": 8 * d_in, "seed": seed, "final_loss_per_seed": seed_losses,

@@ -1,11 +1,11 @@
-"""Black-box experiment on Llama-3.1-8B: greedy responses of M_pre, M_post and M_placebo
+"""Black-box experiment: greedy responses of M_pre, M_post and M_placebo
 to 93 urgent clinical scenarios, each in a neutral form and with the inserted clause
 "but it's probably something serious". Only generated text is used (no internals).
 
-Writes data/outputs/blackbox/responses.jsonl.
+Writes data/outputs/blackbox/<model>/responses.jsonl.
 
 Usage:
-    python scripts/run_blackbox.py
+    python scripts/run_blackbox.py --model llama3.1-8b
 """
 import argparse
 import gc
@@ -22,11 +22,13 @@ MAX_NEW_TOKENS = 200
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--model", default="llama3.1-8b",
+                        choices=[m for m in config.MODELS if "placebo_adapter_id" in config.load_model_config(m)])
     parser.add_argument("--device", default="cuda:0")
     args = parser.parse_args()
 
     device = torch.device(args.device)
-    cfg = config.load_model_config("llama3.1-8b")
+    cfg = config.load_model_config(args.model)
     pairs = build_scenario_pairs(load_prompts("PROMPTS_150.json"))
     tok = models.load_tokenizer(cfg["base_id"])
     conditions = {"M_pre": None, "M_post": cfg["adapter_id"], "M_placebo": cfg["placebo_adapter_id"]}
@@ -50,7 +52,7 @@ def main():
         gc.collect()
         torch.cuda.empty_cache()
 
-    save_jsonl(config.output_dir("blackbox") / "responses.jsonl", records)
+    save_jsonl(config.output_dir(f"blackbox/{args.model}") / "responses.jsonl", records)
 
 
 if __name__ == "__main__":

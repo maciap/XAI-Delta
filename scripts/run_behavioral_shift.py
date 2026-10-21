@@ -1,15 +1,15 @@
-"""Behavioral shift, placebo specificity and patching transfer on Llama-3.1-8B
-(150 prompts, patching at L-3).
+"""Behavioral shift, placebo specificity and patching transfer (150 prompts, patching at L-3).
 
-Three passes, each holding two 8B models in memory:
+Three passes, each holding two models in memory:
   1. M_pre, M_post      -> M_pre, M_post and M_post patched with M_pre
   2. M_pre, M_placebo   -> M_placebo and M_placebo patched with M_pre
   3. M_post, M_placebo  -> M_placebo patched with M_post
 
-Writes data/outputs/behavioral_shift/generations.csv.
+Writes data/outputs/behavioral_shift/<model>/generations.csv.
 
 Usage:
-    python scripts/run_behavioral_shift.py
+    python scripts/run_behavioral_shift.py --model llama3.1-8b
+    python scripts/run_behavioral_shift.py --model qwen2.5-0.5b
 """
 import argparse
 import gc
@@ -33,11 +33,13 @@ def free_memory():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--model", default="llama3.1-8b",
+                        choices=[m for m in config.MODELS if "placebo_adapter_id" in config.load_model_config(m)])
     parser.add_argument("--device", default="cuda:0")
     args = parser.parse_args()
 
     device = torch.device(args.device)
-    cfg = config.load_model_config("llama3.1-8b")
+    cfg = config.load_model_config(args.model)
     base_id, medical, placebo = cfg["base_id"], cfg["adapter_id"], cfg["placebo_adapter_id"]
     prompts = load_prompts("PROMPTS_150.json")
     tok = models.load_tokenizer(base_id)
@@ -74,7 +76,7 @@ def main():
         "M_placebo patched at L-3": [r["patched"] for r in placebo_records],
         "M_placebo patched with M_post at L-3": cross,
     })
-    path = config.output_dir("behavioral_shift") / "generations.csv"
+    path = config.output_dir(f"behavioral_shift/{args.model}") / "generations.csv"
     df.to_csv(path, index=False)
     log(f"wrote {path} ({len(df)} rows)")
 
